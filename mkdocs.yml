@@ -21,10 +21,32 @@ extra:
       icon: octicons/heart-fill-24
 
 theme:
-  name: material
+  logo: assets/images/logo.png
   favicon: favicon.ico
+  name: material
   language: en
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+
   features:
+    - content.tooltips
     - navigation.instant
     - navigation.tracking
     - navigation.tabs
@@ -33,6 +55,54 @@ theme:
     - navigation.top
     - search.suggest
     - search.highlight
+    - toc.follow
+
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - assets/javascript/tablesort.js
 
 plugins:
   - search
+  - glightbox
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+# Page tree
+nav:
+  - Home:
+      - index.md
+      - Hardware Support: hardware/index.md
+      - Firmware Installatiion: firmware/index.md
+  - Hardware:
+      - hardware/index.md
+      - hardware/inverter_overview.md
+      - hardware/nrf24l01plus.md
+      - hardware/cmt2300a.md
+  - Firmware:
+    - firmware/index.md
+    - firmware/device_profiles.md
+    - firmware/faq.md
+    - Compiling:
+      - firmware/compile_vscode.md
+      - firmware/compile_cli.md
+    - License: license.md
