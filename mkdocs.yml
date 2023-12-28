@@ -1,0 +1,25 @@
+edit_uri: https://github.com/tbnobody/OpenDTU-docs/edit/master/docs/
+
+repo_url: https://github.com/tbnobody/OpenDTU
+repo_name: tbnobody/OpenDTU
+
+site_name: OpenDTU
+site_description: Open Source software for ESP32 MCUs to talk to Hoymiles Inverters
+site_author: "Thomas Basler"
+copyright: Copyright &copy; 2022 - 2023 Thomas Basler and others
+
+extra:
+  social:
+    - icon: material/github
+      link: https://github.com/tbnobody/OpenDTU/discussions
+      name: GitHub Discussions
+    - icon: custom/discord
+      link: https://discord.gg/WzhxEY62mB
+      name: Discord Chat
+    - name: Donate
+      link: https://ko-fi.com/tbnobody
+      icon: octicons/heart-fill-24
+
+theme:
+  name: material
+  custom_dir: custom_theme
