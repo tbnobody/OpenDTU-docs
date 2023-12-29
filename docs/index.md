@@ -42,6 +42,8 @@ The firmware is opensource and free to use!
 If you like this project you can show your appreciation by making a small donation.
 This will help with offsetting the cost of the different hardware devices we support.
 
+[![Buy a coffee](https://img.shields.io/badge/Kofi-donate-FF5E5B?style=for-the-badge&logo=kofi)](https://ko-fi.com/tbnobody){target=_blank}
+
 [1]: https://www.hoymiles.com/
 [2]: https://www.github.com/tbnobody/OpenDTU/discussions
 [3]: https://discord.gg/WzhxEY62mB
