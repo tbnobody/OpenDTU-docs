@@ -103,6 +103,7 @@ nav:
   - Firmware:
     - firmware/index.md
     - firmware/flash_esp.md
+    - firmware/wifi_setup.md
     - firmware/update.md
     - firmware/device_profiles.md
     - firmware/faq.md
