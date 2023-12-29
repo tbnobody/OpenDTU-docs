@@ -104,10 +104,39 @@ nav:
     - firmware/index.md
     - firmware/flash_esp.md
     - firmware/wifi_setup.md
+    - Web UI:
+      - firmware/configuration/login.md
+      - Live View:
+        - firmware/configuration/live_view.md
+        - firmware/configuration/live_view_info.md
+        - firmware/configuration/live_view_eventlog.md
+        - firmware/configuration/live_view_power.md
+        - firmware/configuration/live_view_limit.md
+        - firmware/configuration/live_view_gridprofile.md
+      - Settings:
+        - firmware/configuration/network_settings.md
+        - firmware/configuration/ntp_settings.md
+        - firmware/configuration/mqtt_settings.md
+        - firmware/configuration/inverter_settings.md
+        - firmware/configuration/security_settings.md
+        - firmware/configuration/dtu_settings.md
+        - firmware/configuration/device_settings.md
+        - firmware/configuration/config_settings.md
+        - firmware/configuration/firmware_upgrade.md
+        - firmware/configuration/device_reboot.md
+      - Info:
+        - firmware/configuration/system_info.md
+        - firmware/configuration/network_info.md
+        - firmware/configuration/ntp_info.md
+        - firmware/configuration/mqtt_info.md
+        - firmware/configuration/console.md
+      - firmware/configuration/about.md
     - firmware/update.md
     - firmware/device_profiles.md
+    - firmware/mqtt_topics.md
     - firmware/faq.md
     - Compiling:
       - firmware/compile_vscode.md
       - firmware/compile_cli.md
+      - firmware/compile_webapp.md
     - License: license.md
