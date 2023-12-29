@@ -86,6 +86,8 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
 
 # Page tree
 nav:
@@ -100,6 +102,7 @@ nav:
       - hardware/cmt2300a.md
   - Firmware:
     - firmware/index.md
+    - firmware/flash_esp.md
     - firmware/update.md
     - firmware/device_profiles.md
     - firmware/faq.md
