@@ -28,6 +28,11 @@ Open Source software to talk to [Hoymiles][1]{target=_blank} solar inverters. It
 * Configuration management (export / import configurations)
 * Dark Theme
 
+## Background
+
+This project was started from [this](https://www.mikrocontroller.net/topic/525778){target=_blank} discussion (Mikrocontroller.net).
+It was the goal to replace the original Hoymiles DTU (Telemetry Gateway) with their cloud access. With a lot of reverse engineering the Hoymiles protocol was decrypted and analyzed.
+
 ## Support
 
 For support using openHASP you can find us on Github or Discord:
