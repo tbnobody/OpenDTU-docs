@@ -1,5 +1,11 @@
 # Inverter Overview
 
+!!! note "TSUN compatibility remark"
+    Compatibility with OpenDTU is most likly related to the serial number of the inverter. Current findings indicate that TSUN inverters with a serial number starting with "11" are supported, whereby inverters with a serial number starting with "10" are not.
+
+!!! note "Hoymiles HMS-xxxx-xT-NA compatibility remark"
+    Currently it seems not to be possible to change the communication frequency of the "-NA" inverters. Please set the communication freuqency to 915MHz to get these inverters working.
+
 | Model                | Required RF Module | DC Inputs | MPP-Tracker | AC Phases |
 | ---------------------| ------------------ | :-------: | :---------: | :-------: |
 | Hoymiles HM-300-1T   | NRF24L01+          | 1         | 1           | 1         |
