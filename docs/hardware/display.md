@@ -18,6 +18,14 @@
 
     ![SH1106](../assets/images/sh1106-full.png){width=300}
 
+### OLED Display SSD1309
+
+* Size: 2,42"
+* Resolution: 128x64 pixel
+* Supported bus: I²C
+
+    ![SSD1309](../assets/images/ssd1309-full.jpg){width=300}
+
 ### LCD Display PCD8544
 
 * Size: 2,7"
