@@ -95,6 +95,7 @@ nav:
       - index.md
       - Hardware Support: hardware/index.md
       - Firmware Installatiion: firmware/index.md
+      - Troubleshooting: troubleshooting.md
   - Hardware:
       - hardware/index.md
       - hardware/inverter_overview.md
@@ -146,6 +147,8 @@ nav:
       - firmware/compile_webapp.md
     - License: license.md
   - 3rd Party:
+      - 3rd_party/blinkyparts.md
+      - 3rd_party/opendtu_fusion.md
       - 3rd_party/related.md
       - 3rd_party/cases.md
       - 3rd_party/pcb.md
