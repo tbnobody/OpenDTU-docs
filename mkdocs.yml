@@ -140,6 +140,7 @@ nav:
     - firmware/update.md
     - firmware/device_profiles.md
     - firmware/mqtt_topics.md
+    - firmware/web_api.md
     - firmware/faq.md
     - Howtos:
       - firmware/howto/serial_console.md
