@@ -138,6 +138,8 @@ nav:
     - firmware/device_profiles.md
     - firmware/mqtt_topics.md
     - firmware/faq.md
+    - Howtos:
+      - firmware/howto/serial_console.md
     - Compiling:
       - firmware/compile_vscode.md
       - firmware/compile_cli.md

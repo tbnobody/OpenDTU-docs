@@ -2,16 +2,7 @@
 
 ## :question: How to observe the ESP32 boot process by looking at the serial console?
 
-The serial console which is shown in the WebUI does not show the whole boot process and also not several very critical errors. (Just because in such moments the TCP connection is also interrupted). There are several ways to look at the serial console. First of all, the ESP32 has to be connected via an USB cable to the computer.
-
-* If you are using Windows and installed a pre-compiled .bin file you can use e.g. [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html){target=_blank}
-    * Download the putty.exe file and run it.
-    * Enter the correct serial port (e.g. COM3) and the right baud rate: 115200
-    ![Putty](../assets/images/Putty.png)
-    * Then press "Open"
-
-* If you are compiling the source by yourself using VS Code you can just press the "Serial Monitor" button in the status bar
-  ![VSCode Serial Monitor](../assets/images/vscode_serial_monitor.png){align=right}
+Please see [here](howto/serial_console.md)
 
 ## :question: After a firmwware update some new features do not appear in the web interface
 
