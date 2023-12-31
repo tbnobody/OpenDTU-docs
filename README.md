@@ -1,5 +1,9 @@
 # OpenDTU documentation
 
+## Read the documentation
+
+The published documentation can be found here: <https://tbnobody.github.io/OpenDTU-docs/>
+
 ## Testing
 
 Install the required dependencies:
