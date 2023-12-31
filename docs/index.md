@@ -28,6 +28,16 @@ Open Source software to talk to [Hoymiles][1]{target=_blank} solar inverters. It
 * Configuration management (export / import configurations)
 * Dark Theme
 
+## Features for developers
+
+* The microcontroller part
+    * Build with Arduino PlatformIO Framework for the ESP32
+    * Uses a fork of [ESPAsyncWebserver](https://github.com/yubox-node-org/ESPAsyncWebServer) and [espMqttClient](https://github.com/bertmelis/espMqttClient)
+
+* The WebApp part
+    * Build with [Vue.js](https://vuejs.org) and [Bootstrap](https://getbootstrap.com)
+    * Source is written in TypeScript
+
 ## Background
 
 This project was started from [this](https://www.mikrocontroller.net/topic/525778){target=_blank} discussion (Mikrocontroller.net).
