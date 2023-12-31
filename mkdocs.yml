@@ -99,6 +99,8 @@ nav:
   - Hardware:
       - hardware/index.md
       - hardware/inverter_overview.md
+      - ESP32 Modules:
+        - hardware/esp32nodemcu_38pin.md
       - RF Modules:
         - hardware/nrf24l01plus.md
         - hardware/cmt2300a.md
