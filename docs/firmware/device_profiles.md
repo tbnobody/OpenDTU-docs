@@ -83,7 +83,9 @@ To change the device profile, navigate to the "Device Manager" and selected the 
 
 The json file can contain multiple profiles. Each profile requires a name and different parameters. If one parameter is not set, the default value, as compiled into the firmware is used. The example above shows all the currently supported values. Others may follow. Sample files for some boards can be found [here](https://github.com/tbnobody/OpenDTU/tree/master/docs/DeviceProfiles){target=_blank}. This means you can just flash the generic bin file and upload the json file. Then you select your board and everything works hopyfully as expected.
 
-Please be aware that numerical values used in profile JSON File are the **ESP chip GPIO numbers** (NOT phy. PIN numbers).
+!!! note "Note"
+
+    Please be aware that numerical values used in profile `.json` file are the **ESP chip GPIO numbers** (NOT phy. PIN numbers).
 
 ## Implemented configuration values
 
