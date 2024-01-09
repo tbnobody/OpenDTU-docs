@@ -42,6 +42,10 @@
 
     Please see [here](howto/serial_console.md)
 
+??? question "The ESP does not boot anymore and the serial console shows 'Brownout detector was triggered'"
+
+    This means that under certain circumstances (activation of WLAN/Ethernet or sending requests to the inverter) the supply voltage drops to such an extent that the ESP can no longer work reliably. This can be remedied, for example, with a 100uF capacitor between VCC and GND. In exceptional cases, the power supply unit also appears to be too weak. The cable cross-section of the USB cable can also have an influence.
+
 ## Build errors
 
 ??? question "OpenDTU does not build: error: 'bad_alloc' was not declared in this scope"
