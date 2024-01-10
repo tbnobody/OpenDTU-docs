@@ -6,6 +6,10 @@
 
 Open Source software to talk to [Hoymiles][1]{target=_blank} solar inverters. It is an alternative to their DTUs[^1] which sync everthing into the s-Miles cloud.
 
+!!! note "Note"
+
+    You can only use one DTU for a specific inverter. You cannot query a inverter with two DTUs. Mixing up multiple DTUs may lead to an unexpected behavior!
+
 ## Remarkable features
 
 * Read live data from inverter
