@@ -40,11 +40,14 @@ Possible values:
 
 Please see [NRF24 Transmitting power](#nrf24-transmitting-power). There is a more granular setting option.
 
+#### CMT2300A Region/Country :material-form-dropdown:{title="Dropdown"}
+
+This setting affects the frequency selection below and also changes the band configuration of the CMT2300A module.
+
 #### CMT2300A frequency :material-tune-variant:{title="Slider"}
 
 After starting an HMS/HMT inverter (or after 15 minutes without communication), it listens on a frequency of 865 MHz in Europe or 915 MHz for US devices (-NA).
-In Europe, the DTU must change this frequency before further communication. This is the value that can be set here. If communication with the inverter is not possible, it is possible that radio communication is already taking place on the corresponding frequency. In this case, the value must be adjusted slightly.
-For US devices, this value must be permanently set to 915 MHz.
+The DTU must change this frequency before further communication. This is the value that can be set here. If communication with the inverter is not possible, it is possible that radio communication is already taking place on the corresponding frequency. In this case, the value must be adjusted slightly.
 
 !!! warning "Warning"
 

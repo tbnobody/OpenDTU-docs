@@ -4,7 +4,7 @@
     Compatibility with OpenDTU is most likly related to the serial number of the inverter. Current findings indicate that TSUN inverters with a serial number starting with "11" are supported, whereby inverters with a serial number starting with "10" are not.
 
 !!! note "Hoymiles HMS-xxxx-xT-NA compatibility remark"
-    Currently it seems not to be possible to change the communication frequency of the "-NA" inverters. Please set the communication freuqency to 915MHz to get these inverters working.
+    You have to change the Country/Region in the [DTU settings](../firmware/configuration/dtu_settings.md#cmt2300a-regioncountry).
 
 | Model                | Required RF Module | DC Inputs | MPP-Tracker | AC Phases |
 | ---------------------| ------------------ | :-------: | :---------: | :-------: |
