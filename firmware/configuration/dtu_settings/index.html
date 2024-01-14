@@ -1388,6 +1388,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#cmt2300a-regioncountry" class="md-nav__link">
+    <span class="md-ellipsis">
+      CMT2300A Region/Country 
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#cmt2300a-frequency" class="md-nav__link">
     <span class="md-ellipsis">
       CMT2300A frequency 
@@ -2258,6 +2267,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#cmt2300a-regioncountry" class="md-nav__link">
+    <span class="md-ellipsis">
+      CMT2300A Region/Country 
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#cmt2300a-frequency" class="md-nav__link">
     <span class="md-ellipsis">
       CMT2300A frequency 
@@ -2321,10 +2339,11 @@ If you select a value that is too high, the power supply unit may not be able to
 </div>
 <h4 id="cmt2300a-transmitting-power">CMT2300A Transmitting power <span class="twemoji" title="Slider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 13c-1.86 0-3.41 1.28-3.86 3H2v2h2.14c.45 1.72 2 3 3.86 3s3.41-1.28 3.86-3H22v-2H11.86c-.45-1.72-2-3-3.86-3m0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2M19.86 6c-.45-1.72-2-3-3.86-3s-3.41 1.28-3.86 3H2v2h10.14c.45 1.72 2 3 3.86 3s3.41-1.28 3.86-3H22V6h-2.14M16 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2Z"/></svg></span></h4>
 <p>Please see <a href="#nrf24-transmitting-power">NRF24 Transmitting power</a>. There is a more granular setting option.</p>
+<h4 id="cmt2300a-regioncountry">CMT2300A Region/Country <span class="twemoji" title="Dropdown"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 5h3l-1.5 2L17 5M3 2h18a2 2 0 0 1 2 2v4c0 1.11-.89 2-2 2h-5v10c0 1.11-.89 2-2 2H3a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2m0 2v4h11V4H3m18 4V4h-5v4h5M3 20h11V10H3v10m2-8h7v2H5v-2m0 4h7v2H5v-2Z"/></svg></span></h4>
+<p>This setting affects the frequency selection below and also changes the band configuration of the CMT2300A module.</p>
 <h4 id="cmt2300a-frequency">CMT2300A frequency <span class="twemoji" title="Slider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 13c-1.86 0-3.41 1.28-3.86 3H2v2h2.14c.45 1.72 2 3 3.86 3s3.41-1.28 3.86-3H22v-2H11.86c-.45-1.72-2-3-3.86-3m0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2M19.86 6c-.45-1.72-2-3-3.86-3s-3.41 1.28-3.86 3H2v2h10.14c.45 1.72 2 3 3.86 3s3.41-1.28 3.86-3H22V6h-2.14M16 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2Z"/></svg></span></h4>
 <p>After starting an HMS/HMT inverter (or after 15 minutes without communication), it listens on a frequency of 865 MHz in Europe or 915 MHz for US devices (-NA).
-In Europe, the DTU must change this frequency before further communication. This is the value that can be set here. If communication with the inverter is not possible, it is possible that radio communication is already taking place on the corresponding frequency. In this case, the value must be adjusted slightly.
-For US devices, this value must be permanently set to 915 MHz.</p>
+The DTU must change this frequency before further communication. This is the value that can be set here. If communication with the inverter is not possible, it is possible that radio communication is already taking place on the corresponding frequency. In this case, the value must be adjusted slightly.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Please check your local regulations if you are allowed to send on the choosen frequency with the specified transmit power!</p>
@@ -2359,7 +2378,7 @@ For US devices, this value must be permanently set to 915 MHz.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 29, 2023 18:38:20</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 14, 2024 17:37:10</span>
   </span>
 
     
