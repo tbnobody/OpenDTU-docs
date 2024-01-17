@@ -8,3 +8,4 @@
 * [OpenDTU PCB box for the wider board](https://www.printables.com/model/377994-opendtu-pcb-box-for-the-wider-board){target=_blank}
 * [ESP32 Ahoy openDTU PCB housing](https://www.printables.com/model/376840-esp32-ahoy-opendtu-pcb-housing){target=_blank}
 * [Case for openDTU Ahoy Breakout Board (ESP32 and NRF24L01)](https://www.printables.com/model/421083-case-for-opendtu-ahoy-breakout-board-esp32-and-nrf){target=_blank}
+* [Open-DTU CMT2300A with eByte Test-Board E49-900MBL-01 Case](https://makerworld.com/en/models/144736){target=_blank}
