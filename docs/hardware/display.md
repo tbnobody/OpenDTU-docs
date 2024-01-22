@@ -26,6 +26,19 @@
 
     ![SSD1309](../assets/images/ssd1309-full.jpg){width=300}
 
+### LCD Display ST7567S GM12864-59N
+
+* Size: 2,1"
+* Resolution: 128x64 pixel
+* Supported bus: I²C
+* Datasheet: [link](../assets/datasheets/st7567s_gm12864-59n.webp){target=_blank}
+
+    ![SSD1309](../assets/images/st7567s_gm12864-59n.png){width=300}
+
+!!! note "Note"
+
+    Due to the schematic of the display, it is not possible to turn off the backlight.
+
 ### LCD Display PCD8544
 
 * Size: 2,7"
