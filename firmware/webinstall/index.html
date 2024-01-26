@@ -6,32 +6,32 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Open Source software for ESP32 MCUs to talk to Hoymiles Inverters">
+        <meta name="description" content="Firmware Web Installer for OpenDTU Firmware">
       
       
         <meta name="author" content="Thomas Basler">
       
       
       
-        <link rel="prev" href="../../faq/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../migrate_generic/">
+        <link rel="next" href="../flash_esp/">
       
       
-      <link rel="icon" href="../../../favicon.ico">
+      <link rel="icon" href="../../favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
-        <title>Access the serial console - OpenDTU Documentation</title>
+        <title>Web Flasher - OpenDTU Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,14 +50,14 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -68,7 +68,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#access-the-serial-console" class="md-skip">
+        <a href="#web-flasher" class="md-skip">
           Skip to content
         </a>
       
@@ -103,9 +103,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="OpenDTU Documentation" class="md-header__button md-logo" aria-label="OpenDTU Documentation" data-md-component="logo">
+    <a href="../.." title="OpenDTU Documentation" class="md-header__button md-logo" aria-label="OpenDTU Documentation" data-md-component="logo">
       
-  <img src="../../../assets/images/logo.png" alt="logo">
+  <img src="../../assets/images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Access the serial console
+              Web Flasher
             
           </span>
         </div>
@@ -237,7 +237,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../.." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
   Home
@@ -255,7 +255,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../hardware/" class="md-tabs__link">
+        <a href="../../hardware/" class="md-tabs__link">
           
   
   Hardware
@@ -275,7 +275,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
+        <a href="../" class="md-tabs__link">
           
   
   Firmware
@@ -293,7 +293,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../3rd_party/blinkyparts/" class="md-tabs__link">
+        <a href="../../3rd_party/blinkyparts/" class="md-tabs__link">
           
   
   3rd Party
@@ -332,9 +332,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="OpenDTU Documentation" class="md-nav__button md-logo" aria-label="OpenDTU Documentation" data-md-component="logo">
+    <a href="../.." title="OpenDTU Documentation" class="md-nav__button md-logo" aria-label="OpenDTU Documentation" data-md-component="logo">
       
-  <img src="../../../assets/images/logo.png" alt="logo">
+  <img src="../../assets/images/logo.png" alt="logo">
 
     </a>
     OpenDTU Documentation
@@ -401,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -422,7 +422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hardware/" class="md-nav__link">
+      <a href="../../hardware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -443,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -464,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../troubleshooting/" class="md-nav__link">
+      <a href="../../troubleshooting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -532,7 +532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hardware/" class="md-nav__link">
+      <a href="../../hardware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -553,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hardware/inverter_overview/" class="md-nav__link">
+      <a href="../../hardware/inverter_overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -611,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hardware/esp32nodemcu_38pin/" class="md-nav__link">
+      <a href="../../hardware/esp32nodemcu_38pin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -632,7 +632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hardware/olimexpoeiso/" class="md-nav__link">
+      <a href="../../hardware/olimexpoeiso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -698,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hardware/nrf24l01plus/" class="md-nav__link">
+      <a href="../../hardware/nrf24l01plus/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -719,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hardware/cmt2300a/" class="md-nav__link">
+      <a href="../../hardware/cmt2300a/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -748,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hardware/led/" class="md-nav__link">
+      <a href="../../hardware/led/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -769,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hardware/display/" class="md-nav__link">
+      <a href="../../hardware/display/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -839,7 +839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -857,10 +857,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../webinstall/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -869,6 +878,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -881,7 +891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../flash_esp/" class="md-nav__link">
+      <a href="../flash_esp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -902,7 +912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../wifi_setup/" class="md-nav__link">
+      <a href="../wifi_setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -960,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/login/" class="md-nav__link">
+      <a href="../configuration/login/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1018,7 +1028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/live_view/" class="md-nav__link">
+      <a href="../configuration/live_view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1039,7 +1049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/live_view_info/" class="md-nav__link">
+      <a href="../configuration/live_view_info/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1060,7 +1070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/live_view_eventlog/" class="md-nav__link">
+      <a href="../configuration/live_view_eventlog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1081,7 +1091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/live_view_power/" class="md-nav__link">
+      <a href="../configuration/live_view_power/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1102,7 +1112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/live_view_limit/" class="md-nav__link">
+      <a href="../configuration/live_view_limit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1123,7 +1133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/live_view_gridprofile/" class="md-nav__link">
+      <a href="../configuration/live_view_gridprofile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1189,7 +1199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/network_settings/" class="md-nav__link">
+      <a href="../configuration/network_settings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1210,7 +1220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/ntp_settings/" class="md-nav__link">
+      <a href="../configuration/ntp_settings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1231,7 +1241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/mqtt_settings/" class="md-nav__link">
+      <a href="../configuration/mqtt_settings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1252,7 +1262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/inverter_settings/" class="md-nav__link">
+      <a href="../configuration/inverter_settings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1273,7 +1283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/security_settings/" class="md-nav__link">
+      <a href="../configuration/security_settings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1294,7 +1304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/dtu_settings/" class="md-nav__link">
+      <a href="../configuration/dtu_settings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1315,7 +1325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/device_settings/" class="md-nav__link">
+      <a href="../configuration/device_settings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1336,7 +1346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/config_settings/" class="md-nav__link">
+      <a href="../configuration/config_settings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1357,7 +1367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/firmware_upgrade/" class="md-nav__link">
+      <a href="../configuration/firmware_upgrade/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1378,7 +1388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/device_reboot/" class="md-nav__link">
+      <a href="../configuration/device_reboot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1444,7 +1454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/system_info/" class="md-nav__link">
+      <a href="../configuration/system_info/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1465,7 +1475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/network_info/" class="md-nav__link">
+      <a href="../configuration/network_info/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1486,7 +1496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/ntp_info/" class="md-nav__link">
+      <a href="../configuration/ntp_info/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1507,7 +1517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/mqtt_info/" class="md-nav__link">
+      <a href="../configuration/mqtt_info/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1528,7 +1538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/console/" class="md-nav__link">
+      <a href="../configuration/console/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1557,7 +1567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/about/" class="md-nav__link">
+      <a href="../configuration/about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1586,7 +1596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../update/" class="md-nav__link">
+      <a href="../update/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1607,7 +1617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../device_profiles/" class="md-nav__link">
+      <a href="../device_profiles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1628,7 +1638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mqtt_topics/" class="md-nav__link">
+      <a href="../mqtt_topics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1649,7 +1659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../web_api/" class="md-nav__link">
+      <a href="../web_api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1670,7 +1680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../faq/" class="md-nav__link">
+      <a href="../faq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1688,21 +1698,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
         
           
           <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
@@ -1716,7 +1724,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_11">
             <span class="md-nav__icon md-icon"></span>
             Howtos
@@ -1727,30 +1735,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Access the serial console
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../howto/serial_console/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1759,53 +1747,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      Windows
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      Linux
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compiled-with-vscode" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compiled with VSCode
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1818,7 +1759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../migrate_generic/" class="md-nav__link">
+      <a href="../howto/migrate_generic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1839,7 +1780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade_partition/" class="md-nav__link">
+      <a href="../howto/upgrade_partition/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1860,7 +1801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../generate_image/" class="md-nav__link">
+      <a href="../howto/generate_image/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1926,7 +1867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compile_vscode/" class="md-nav__link">
+      <a href="../compile_vscode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1947,7 +1888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compile_cli/" class="md-nav__link">
+      <a href="../compile_cli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1968,7 +1909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compile_webapp/" class="md-nav__link">
+      <a href="../compile_webapp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1997,7 +1938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../license/" class="md-nav__link">
+      <a href="../../license/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2065,7 +2006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3rd_party/blinkyparts/" class="md-nav__link">
+      <a href="../../3rd_party/blinkyparts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2086,7 +2027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3rd_party/opendtu_fusion/" class="md-nav__link">
+      <a href="../../3rd_party/opendtu_fusion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2107,7 +2048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3rd_party/related/" class="md-nav__link">
+      <a href="../../3rd_party/related/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2128,7 +2069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3rd_party/cases/" class="md-nav__link">
+      <a href="../../3rd_party/cases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2149,7 +2090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3rd_party/pcb/" class="md-nav__link">
+      <a href="../../3rd_party/pcb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2190,41 +2131,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      Windows
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      Linux
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compiled-with-vscode" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compiled with VSCode
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2238,7 +2144,7 @@
                   
 
   
-    <a href="https://github.com/tbnobody/OpenDTU-docs/edit/master/docs/firmware/howto/serial_console.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/tbnobody/OpenDTU-docs/edit/master/docs/firmware/webinstall.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -2247,36 +2153,73 @@
     
       
     
-    <a href="https://github.com/tbnobody/OpenDTU-docs/raw/master/docs/firmware/howto/serial_console.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/tbnobody/OpenDTU-docs/raw/master/docs/firmware/webinstall.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="access-the-serial-console">Access the serial console</h1>
-<p>The serial console which is shown in the WebUI does not show the whole boot process and also not several very critical errors. (Just because in such moments the TCP connection is also interrupted). There are several ways to look at the serial console. First of all, the ESP32 has to be connected via an USB cable to the computer.</p>
-<h2 id="windows">Windows</h2>
-<p>If you are using Windows and installed a pre-compiled .bin file you can use e.g. <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank">Putty</a></p>
-<ul>
-<li>Download the putty.exe file and run it.</li>
+<style>
+  .md-content__button {
+    display: none;
+  }
+  .pick-variant select {
+    background: transparent;
+    width: 300px;
+    padding: 1px;
+    font-size: 16pt;
+    border: 1px solid #ddd;
+    height: 51px;
+    border-radius: 15px;
+  }
+  .invisible {
+    visibility: hidden;
+  }
+  .radios li {
+    list-style: none;
+    line-height: 2em;
+  }
+</style>
+
+<h1 id="web-flasher">Web Flasher</h1>
+<p>Flash or Find your device using next options:</p>
+<ol>
+<li>Plug in your ESP32 to a USB port.</li>
+<li>Hit "Install" and select the correct COM port.</li>
+<li>Get OpenDTU firmware installed and connected in less than 3 minutes!</li>
+</ol>
+<p>Select your product</p>
+<ul class="radios">
 <li>
-<p>Select "Connection type" --&gt; "Serial", enter the correct serial port (e.g. COM3) and the right baud rate: 115200</p>
-<p><a class="glightbox" href="../../../assets/images/Putty.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Putty" src="../../../assets/images/Putty.png" /></a></p>
+    <label><input type="radio" name="type" value="esp32" /> ESP32</label>
 </li>
 <li>
-<p>In the section "Session" --&gt; "Logging" you can optionally configure a logging output to a file</p>
+    <label><input type="radio" name="type" value="esp32s3" /> ESP32S3</label>
 </li>
-<li>Then press "Open"</li>
+<li>
+    <label><input type="radio" name="type" value="esp32s3_usb" /> ESP32S3 with integrated USB connection</label>
+</li>
 </ul>
-<h2 id="linux">Linux</h2>
-<p>You will see a device pop up when connecting your ESP32. It may be <code>/dev/ttyUSB0</code> (or <code>USB1</code>, <code>USB2</code>, etc.) or <code>/dev/ttyACM0</code> (or 1 or 2 etc.). If you don't see any popup, you can use <code>sudo dmesg</code> in the terminal to determine the name. Connect to it using a serial terminal. I recommend minicom for this application (<code>sudo apt install minicom</code>). This should do (in a terminal):</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>minicom<span class="w"> </span>-D<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span>-C<span class="w"> </span>/tmp/capture.txt<span class="w"> </span>-b<span class="w"> </span><span class="m">115200</span>
-</span></code></pre></div>
-<p>You should see the output you also see in the Web console. You can also look at <code>/tmp/capture.txt</code> in parallel to make sure the messages are captured there.</p>
-<h2 id="compiled-with-vscode">Compiled with VSCode</h2>
-<p>If you are compiling the source by yourself using VS Code you can just press the "Serial Monitor" button in the status bar</p>
-<p><a class="glightbox" href="../../../assets/images/vscode_serial_monitor.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="VSCode Serial Monitor" src="../../../assets/images/vscode_serial_monitor.png" /></a></p>
+<p class="button-row" align="center">
+<esp-web-install-button class="invisible">
+  <button slot="activate" class="md-button md-button--primary">INSTALL</button>
+  <span slot="unsupported">Use Chrome Desktop</span>
+  <span slot="not-allowed">Not allowed to use this on HTTP!</span>
+</esp-web-install-button>
+</p>
+
+<p>Powered by <a href="https://esphome.github.io/esp-web-tools/" target="_blank">ESP Web Tools</a></p>
+<script>
+    document.querySelectorAll('input[name="type"]').forEach(radio =>
+    radio.addEventListener("change", () => {
+        const button = document.querySelector('esp-web-install-button');
+        button.manifest = `../files/manifest_${radio.value}.json`;
+        button.classList.remove('invisible');
+    }
+    ));
+</script>
+<script type="module" src="https://unpkg.com/esp-web-tools@8.0.1/dist/web/install-button.js?module"></script>
 
 
 
@@ -2299,7 +2242,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 31, 2023 11:54:16</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 26, 2024 20:06:23</span>
   </span>
 
     
@@ -2309,7 +2252,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 31, 2023 11:54:16</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 26, 2024 20:06:23</span>
   </span>
 
     
@@ -2393,14 +2336,14 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "toc.follow", "navigation.path", "search.suggest", "content.tooltips", "content.action.edit", "content.action.view"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "toc.follow", "navigation.path", "search.suggest", "content.tooltips", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       
-        <script src="../../../assets/javascript/tablesort.js"></script>
+        <script src="../../assets/javascript/tablesort.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

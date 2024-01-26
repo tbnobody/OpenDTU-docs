@@ -1,0 +1,13 @@
+{
+    "name": "OpenDTU ESP32S3",
+    "version": "24.1.21",
+    "funding_url": "https://ko-fi.com/tbnobody",
+    "builds": [
+      {
+        "chipFamily": "ESP32-S3",
+        "parts": [
+          { "path": "opendtu-generic_esp32s3.factory.bin", "offset": 0 }
+        ]
+      }
+    ]
+  }

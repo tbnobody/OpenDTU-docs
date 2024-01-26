@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../../faq/">
+        <link rel="prev" href="../upgrade_partition/">
       
       
-        <link rel="next" href="../migrate_generic/">
+        <link rel="next" href="../../compile_vscode/">
       
       
       <link rel="icon" href="../../../favicon.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Access the serial console - OpenDTU Documentation</title>
+        <title>Generate pre-configured image - OpenDTU Documentation</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#access-the-serial-console" class="md-skip">
+        <a href="#generate-pre-configured-image" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Access the serial console
+              Generate pre-configured image
             
           </span>
         </div>
@@ -1727,30 +1727,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Access the serial console
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../serial_console/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1759,53 +1739,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      Windows
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      Linux
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compiled-with-vscode" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compiled with VSCode
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1857,10 +1790,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../generate_image/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Generate pre-configured image
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1869,6 +1822,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-filesystem-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate Filesystem image
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrate-filesystem-into-factorybin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrate filesystem into factory.bin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partition-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partition Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contents-of-the-data-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contents of the data folder
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2197,27 +2215,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Windows
+      Introduction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#linux" class="md-nav__link">
+  <a href="#generate-filesystem-image" class="md-nav__link">
     <span class="md-ellipsis">
-      Linux
+      Generate Filesystem image
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#compiled-with-vscode" class="md-nav__link">
+  <a href="#integrate-filesystem-into-factorybin" class="md-nav__link">
     <span class="md-ellipsis">
-      Compiled with VSCode
+      Integrate filesystem into factory.bin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partition-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partition Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contents-of-the-data-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contents of the data folder
     </span>
   </a>
   
@@ -2238,7 +2274,7 @@
                   
 
   
-    <a href="https://github.com/tbnobody/OpenDTU-docs/edit/master/docs/firmware/howto/serial_console.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/tbnobody/OpenDTU-docs/edit/master/docs/firmware/howto/generate_image.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -2247,36 +2283,108 @@
     
       
     
-    <a href="https://github.com/tbnobody/OpenDTU-docs/raw/master/docs/firmware/howto/serial_console.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/tbnobody/OpenDTU-docs/raw/master/docs/firmware/howto/generate_image.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="access-the-serial-console">Access the serial console</h1>
-<p>The serial console which is shown in the WebUI does not show the whole boot process and also not several very critical errors. (Just because in such moments the TCP connection is also interrupted). There are several ways to look at the serial console. First of all, the ESP32 has to be connected via an USB cable to the computer.</p>
-<h2 id="windows">Windows</h2>
-<p>If you are using Windows and installed a pre-compiled .bin file you can use e.g. <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank">Putty</a></p>
-<ul>
-<li>Download the putty.exe file and run it.</li>
-<li>
-<p>Select "Connection type" --&gt; "Serial", enter the correct serial port (e.g. COM3) and the right baud rate: 115200</p>
-<p><a class="glightbox" href="../../../assets/images/Putty.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Putty" src="../../../assets/images/Putty.png" /></a></p>
-</li>
-<li>
-<p>In the section "Session" --&gt; "Logging" you can optionally configure a logging output to a file</p>
-</li>
-<li>Then press "Open"</li>
-</ul>
-<h2 id="linux">Linux</h2>
-<p>You will see a device pop up when connecting your ESP32. It may be <code>/dev/ttyUSB0</code> (or <code>USB1</code>, <code>USB2</code>, etc.) or <code>/dev/ttyACM0</code> (or 1 or 2 etc.). If you don't see any popup, you can use <code>sudo dmesg</code> in the terminal to determine the name. Connect to it using a serial terminal. I recommend minicom for this application (<code>sudo apt install minicom</code>). This should do (in a terminal):</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>minicom<span class="w"> </span>-D<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span>-C<span class="w"> </span>/tmp/capture.txt<span class="w"> </span>-b<span class="w"> </span><span class="m">115200</span>
+<h1 id="generate-pre-configured-image">Generate pre-configured image</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This howto explains how to generate a image (<code>.bin</code> file) containing a custom <code>pin_mapping.json</code> or pre-configured <code>config.json</code>. You have to compile OpenDTU using <a href="../../compile_vscode/">VSCode</a>.</p>
+<h2 id="generate-filesystem-image">Generate Filesystem image</h2>
+<p>All configuration is placed in the so called "Filesystem Image". The image can be generated manually by creating a folder called <code>data</code> in the main directory of OpenDTU (where the <code>platformio.ini</code> is located). Then call the OpenDTU function "Build Filesystem Image" from the Project Tasks. It will generate file called <code>littlefs.bin</code> in the <code>.pio/build/&lt;environment&gt;</code> folder. The <code>littlefs.bin</code> file has to be flashed on address <code>0x3D0000</code> on the ESP (see <a href="#partition-table">Partition Table</a> below).</p>
+<p><a class="glightbox" href="../../../assets/images/vscode_platformio_littlefs.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Build Filesystem Image" src="../../../assets/images/vscode_platformio_littlefs.png" /></a></p>
+<h2 id="integrate-filesystem-into-factorybin">Integrate filesystem into factory.bin</h2>
+<p>The <code>esptool.py</code> command can be used to manually generate a <code>.factory.bin</code> file which already contains the <code>littlefs.bin</code>.</p>
+<p>A sample command for ESP32 would be:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>esptool.py<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>--chip<span class="w"> </span>esp32<span class="w"> </span>merge_bin<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>-o<span class="w"> </span>custom_firmware.factory.bin<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>--flash_mode<span class="w"> </span>dio<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>--flash_freq<span class="w"> </span>40m<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>--flash_size<span class="w"> </span>4MB<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>0x1000<span class="w"> </span>bootloader.bin<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>0x8000<span class="w"> </span>partitions.bin<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>0xe000<span class="w"> </span>boot_app0.bin<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>0x10000<span class="w"> </span>firmware.bin<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>0x3d0000<span class="w"> </span>littlefs.bin
 </span></code></pre></div>
-<p>You should see the output you also see in the Web console. You can also look at <code>/tmp/capture.txt</code> in parallel to make sure the messages are captured there.</p>
-<h2 id="compiled-with-vscode">Compiled with VSCode</h2>
-<p>If you are compiling the source by yourself using VS Code you can just press the "Serial Monitor" button in the status bar</p>
-<p><a class="glightbox" href="../../../assets/images/vscode_serial_monitor.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="VSCode Serial Monitor" src="../../../assets/images/vscode_serial_monitor.png" /></a></p>
+<p>This command has to be executed in the <code>.pio/build/&lt;environment&gt;</code> folder. It will output a file called <code>custom_firmware.factory.bin</code>.</p>
+<h2 id="partition-table">Partition Table</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>SubType</th>
+<th>Offset</th>
+<th>Size</th>
+<th>Flags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nvs</td>
+<td>data</td>
+<td>nvs</td>
+<td>0x9000</td>
+<td>0x5000</td>
+<td></td>
+</tr>
+<tr>
+<td>otadata</td>
+<td>data</td>
+<td>ota</td>
+<td>0xe000</td>
+<td>0x2000</td>
+<td></td>
+</tr>
+<tr>
+<td>app0</td>
+<td>app</td>
+<td>ota_0</td>
+<td>0x10000</td>
+<td>0x1E0000</td>
+<td></td>
+</tr>
+<tr>
+<td>app1</td>
+<td>app</td>
+<td>ota_1</td>
+<td>0x1F0000</td>
+<td>0x1E0000</td>
+<td></td>
+</tr>
+<tr>
+<td>spiffs</td>
+<td>data</td>
+<td>spiffs</td>
+<td>0x3D0000</td>
+<td>0x30000</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="contents-of-the-data-folder">Contents of the data folder</h2>
+<p>The <code>data</code> folder should contain the following files:</p>
+<ul>
+<li><code>pin_mapping.json</code></li>
+<li><code>config.json</code></li>
+</ul>
+<p>The contents of the <code>pin_mapping.json</code> can be obtained <a href="../../device_profiles/">here</a>.</p>
+<p>The <code>config.json</code> should contain at least the following content:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">&quot;cfg&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">72448</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">&quot;device&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="nt">&quot;pinmapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;Name of device profile&gt;&quot;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>But of course you can set all other required settings. If no value is specified for a setting, the default values are used.</p>
 
 
 
@@ -2299,7 +2407,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 31, 2023 11:54:16</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 26, 2024 21:12:38</span>
   </span>
 
     
@@ -2309,7 +2417,7 @@
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 31, 2023 11:54:16</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 26, 2024 21:12:38</span>
   </span>
 
     
