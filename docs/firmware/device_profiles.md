@@ -1,5 +1,9 @@
 # Device Profiles
 
+!!! note "Note"
+
+    Ready to use device profiles can be found [here](https://github.com/tbnobody/OpenDTU/tree/master/docs/DeviceProfiles){target=_blank}.
+
 It is possible to change hardware settings like pin assignments or ethernet support using a json file. The json file can be uploaded using the configuration management in the web interface. Just select "Pin Mapping (pin_mapping.json)" in the recovery section.
 
 When the file is uploaded the ESP performs a reboot. This is required as the pin settings could have changed within the file. By default all the pin assignments are used as compiled into the firmware.
