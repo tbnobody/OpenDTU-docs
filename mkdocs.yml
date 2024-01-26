@@ -46,16 +46,21 @@ theme:
         name: Switch to system preference
 
   features:
-    - content.tooltips
+    ## Setting up navigation
     - navigation.instant
     - navigation.tracking
+    - navigation.path
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.path
     - navigation.top
-    - search.suggest
-    - search.highlight
     - toc.follow
+    ## Search
+    - navigation.path
+    - search.suggest
+    ## Content tabs
+    - content.tooltips
+    - content.action.edit
+    - content.action.view
 
 extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
@@ -113,6 +118,7 @@ nav:
       - hardware/display.md
   - Firmware:
     - firmware/index.md
+    - firmware/webinstall.md
     - firmware/flash_esp.md
     - firmware/wifi_setup.md
     - Web UI:

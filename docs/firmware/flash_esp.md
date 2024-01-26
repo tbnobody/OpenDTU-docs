@@ -36,6 +36,12 @@ Before starting the flash process you have to put the ESP into *flash mode*. Mos
 
 The actual procedure to flash the ESP32 depends on the tool used. Click on the tab below that matches your flash tool.
 
+=== "Web Flasher :material-linux::material-apple::material-microsoft-windows:"
+
+    [OpenDTU Web Flasher](webinstall.md)
+
+    The easiest, platform independent method. Requires Chrome based browser.
+
 === "ESP Flash Tools :material-microsoft-windows:"
     Espressif provides their own [Flash Download Tools](https://www.espressif.com/en/support/download/other-tools){target=_blank} for Windows.
 
@@ -58,12 +64,6 @@ The actual procedure to flash the ESP32 depends on the tool used. Click on the t
     ```
 
     Change `COM1` to the correct port on your computer. If you get an error at the end of the flash procedure, you can try with a lower the baudrate eg. 460800.
-
-=== "ESP_Flasher Web :material-linux::material-apple::material-microsoft-windows:"
-
-    [ESP_Flasher](https://espressif.github.io/esptool-js/) - web version
-
-    It is also possible to flash it via the web tools which might be more convenient and is platform independent.
 
 === "ESP_Flasher :material-microsoft-windows:"
 
