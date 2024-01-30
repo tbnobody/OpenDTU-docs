@@ -46,6 +46,10 @@
 
     This means that under certain circumstances (activation of WLAN/Ethernet or sending requests to the inverter) the supply voltage drops to such an extent that the ESP can no longer work reliably. This can be remedied, for example, with a 100uF capacitor between VCC and GND. In exceptional cases, the power supply unit also appears to be too weak. The cable cross-section of the USB cable can also have an influence.
 
+??? question "After a reboot of the router or access point, OpenDTU does not reconnect immediatly to the WiFi"
+
+    OpenDTU tries to reconnect to the WiFi for 30 seconds. If it can't find the WiFi within this time it stops reconnecting and waits for 10 minutes until a new connect attempt is done. This is done because all channels are tried during a connection attempt. This means that an end device that is connected to the "Admin Access Point" may lose the connection or is not be able to connect at all.
+
 ## Build errors
 
 ??? question "OpenDTU does not build: error: 'bad_alloc' was not declared in this scope"
