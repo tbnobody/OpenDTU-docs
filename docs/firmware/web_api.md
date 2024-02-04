@@ -26,6 +26,7 @@ may be incomplete
 | Post     | yes | /api/inverter/edit |
 | Post     | yes | /api/limit/config |
 | Get      | no  | /api/limit/status |
+| Get      | no  | /api/livedata/status?inv=inverter-serialnumber |
 | Get      | no  | /api/livedata/status |
 | Post     | yes | /api/maintenance/reboot |
 | Get+Post | yes | /api/mqtt/config |
@@ -60,11 +61,11 @@ may be incomplete
 
 You can "talk" to the OpenDTU with a command line tool like `curl`. The output is in plain JSON, without carriage return/linefeed and is therefore not very human readable.
 
-#### Get current livedata
+#### Get common live data
 
 ```bash
 $ curl http://192.168.10.10/api/livedata/status
-{"inverters":[{"serial":"11617160xxxx","name":"Meine Solaranlage","data_age":6983,"reachable":false,"producing":false,"limit_relative":0,"limit_absolute":-1,"AC":{"0":{"Power":{"v":0,"u":"W","d":1},"Voltage":{"v":0,"u":"V","d":1},"Current":{"v":0,"u":"A","d":2},"Power DC":{"v":0,"u":"W","d":1},"YieldDay":{"v":0,"u":"Wh","d":0},"YieldTotal":{"v":0,"u":"kWh","d":3},"Frequency":{"v":0,"u":"Hz","d":2},"PowerFactor":{"v":0,"u":"","d":3},"ReactivePower":{"v":0,"u":"var","d":1},"Efficiency":{"v":0,"u":"%","d":3}}},"DC":{"0":{"name":{"u":""},"Power":{"v":0,"u":"W","d":1},"Voltage":{"v":0,"u":"V","d":1},"Current":{"v":0,"u":"A","d":2},"YieldDay":{"v":0,"u":"Wh","d":0},"YieldTotal":{"v":0,"u":"kWh","d":3},"Irradiation":{"v":0,"u":"%","d":3}},"1":{"name":{"u":""},"Power":{"v":0,"u":"W","d":1},"Voltage":{"v":0,"u":"V","d":1},"Current":{"v":0,"u":"A","d":2},"YieldDay":{"v":0,"u":"Wh","d":0},"YieldTotal":{"v":0,"u":"kWh","d":3},"Irradiation":{"v":0,"u":"%","d":3}},"2":{"name":{"u":""},"Power":{"v":0,"u":"W","d":1},"Voltage":{"v":0,"u":"V","d":1},"Current":{"v":0,"u":"A","d":2},"YieldDay":{"v":0,"u":"Wh","d":0},"YieldTotal":{"v":0,"u":"kWh","d":3},"Irradiation":{"v":0,"u":"%","d":3}},"3":{"name":{"u":""},"Power":{"v":0,"u":"W","d":1},"Voltage":{"v":0,"u":"V","d":1},"Current":{"v":0,"u":"A","d":2},"YieldDay":{"v":0,"u":"Wh","d":0},"YieldTotal":{"v":0,"u":"kWh","d":3}}},"INV":{"0":{"Temperature":{"v":0,"u":"°C","d":1}}},"events":0},{"serial":"11417160xxxx","name":"test","data_age":6983,"reachable":false,"producing":false,"limit_relative":0,"limit_absolute":-1,"AC":{"0":{"Power":{"v":0,"u":"W","d":1},"Voltage":{"v":0,"u":"V","d":1},"Current":{"v":0,"u":"A","d":2},"Power DC":{"v":0,"u":"W","d":1},"YieldDay":{"v":0,"u":"Wh","d":0},"YieldTotal":{"v":0,"u":"kWh","d":3},"Frequency":{"v":0,"u":"Hz","d":2},"PowerFactor":{"v":0,"u":"","d":3},"ReactivePower":{"v":0,"u":"var","d":1},"Efficiency":{"v":0,"u":"%","d":3}}},"DC":{"0":{"name":{"u":"test 1"},"Power":{"v":0,"u":"W","d":1},"Voltage":{"v":0,"u":"V","d":1},"Current":{"v":0,"u":"A","d":2},"YieldDay":{"v":0,"u":"Wh","d":0},"YieldTotal":{"v":0,"u":"kWh","d":3},"Irradiation":{"v":0,"u":"%","d":3}},"1":{"name":{"u":"test 2"},"Power":{"v":0,"u":"W","d":1},"Voltage":{"v":0,"u":"V","d":1},"Current":{"v":0,"u":"A","d":2},"YieldDay":{"v":0,"u":"Wh","d":0},"YieldTotal":{"v":0,"u":"kWh","d":3},"Irradiation":{"v":0,"u":"%","d":3}}},"INV":{"0":{"Temperature":{"v":0,"u":"°C","d":1}}},"events":0}],"total":{"Power":{"v":0,"u":"W","d":1},"YieldDay":{"v":0,"u":"Wh","d":0},"YieldTotal":{"v":0,"u":"kWh","d":2}},"hints":{"time_sync":false,"radio_problem":false,"default_password":false}}
+{"inverters":[{"serial":"1161716xxxxx","name":"Meine Solaranlage","order":0,"data_age":30636,"poll_enabled":true,"reachable":false,"producing":false,"limit_relative":100,"limit_absolute":1500},{"serial":"1141716xxxxx","name":"Inverter 2","order":0,"data_age":108349,"poll_enabled":false,"reachable":false,"producing":false,"limit_relative":0,"limit_absolute":-1},{"serial":"1141716xxxxx","name":"Inverter 3","order":0,"data_age":108349,"poll_enabled":false,"reachable":false,"producing":false,"limit_relative":0,"limit_absolute":-1}],"total":{"Power":{"v":0,"u":"W","d":1},"YieldDay":{"v":0,"u":"Wh","d":0},"YieldTotal":{"v":2515.605957,"u":"kWh","d":3}},"hints":{"time_sync":false,"radio_problem":false,"default_password":false}}
 ```
 
 To enhance readability (and filter information) use the JSON command line processor `jq`.
@@ -74,359 +75,37 @@ $ curl --no-progress-meter http://192.168.10.10/api/livedata/status | jq
 {
   "inverters": [
     {
-      "serial": "116171603546",
+      "serial": "1161716xxxxx",
       "name": "Meine Solaranlage",
-      "data_age": 7038,
+      "order": 0,
+      "data_age": 30687,
+      "poll_enabled": true,
       "reachable": false,
       "producing": false,
-      "limit_relative": 0,
-      "limit_absolute": -1,
-      "AC": {
-        "0": {
-          "Power": {
-            "v": 0,
-            "u": "W",
-            "d": 1
-          },
-          "Voltage": {
-            "v": 0,
-            "u": "V",
-            "d": 1
-          },
-          "Current": {
-            "v": 0,
-            "u": "A",
-            "d": 2
-          },
-          "Power DC": {
-            "v": 0,
-            "u": "W",
-            "d": 1
-          },
-          "YieldDay": {
-            "v": 0,
-            "u": "Wh",
-            "d": 0
-          },
-          "YieldTotal": {
-            "v": 0,
-            "u": "kWh",
-            "d": 3
-          },
-          "Frequency": {
-            "v": 0,
-            "u": "Hz",
-            "d": 2
-          },
-          "PowerFactor": {
-            "v": 0,
-            "u": "",
-            "d": 3
-          },
-          "ReactivePower": {
-            "v": 0,
-            "u": "var",
-            "d": 1
-          },
-          "Efficiency": {
-            "v": 0,
-            "u": "%",
-            "d": 3
-          }
-        }
-      },
-      "DC": {
-        "0": {
-          "name": {
-            "u": ""
-          },
-          "Power": {
-            "v": 0,
-            "u": "W",
-            "d": 1
-          },
-          "Voltage": {
-            "v": 0,
-            "u": "V",
-            "d": 1
-          },
-          "Current": {
-            "v": 0,
-            "u": "A",
-            "d": 2
-          },
-          "YieldDay": {
-            "v": 0,
-            "u": "Wh",
-            "d": 0
-          },
-          "YieldTotal": {
-            "v": 0,
-            "u": "kWh",
-            "d": 3
-          },
-          "Irradiation": {
-            "v": 0,
-            "u": "%",
-            "d": 3
-          }
-        },
-        "1": {
-          "name": {
-            "u": ""
-          },
-          "Power": {
-            "v": 0,
-            "u": "W",
-            "d": 1
-          },
-          "Voltage": {
-            "v": 0,
-            "u": "V",
-            "d": 1
-          },
-          "Current": {
-            "v": 0,
-            "u": "A",
-            "d": 2
-          },
-          "YieldDay": {
-            "v": 0,
-            "u": "Wh",
-            "d": 0
-          },
-          "YieldTotal": {
-            "v": 0,
-            "u": "kWh",
-            "d": 3
-          },
-          "Irradiation": {
-            "v": 0,
-            "u": "%",
-            "d": 3
-          }
-        },
-        "2": {
-          "name": {
-            "u": ""
-          },
-          "Power": {
-            "v": 0,
-            "u": "W",
-            "d": 1
-          },
-          "Voltage": {
-            "v": 0,
-            "u": "V",
-            "d": 1
-          },
-          "Current": {
-            "v": 0,
-            "u": "A",
-            "d": 2
-          },
-          "YieldDay": {
-            "v": 0,
-            "u": "Wh",
-            "d": 0
-          },
-          "YieldTotal": {
-            "v": 0,
-            "u": "kWh",
-            "d": 3
-          },
-          "Irradiation": {
-            "v": 0,
-            "u": "%",
-            "d": 3
-          }
-        },
-        "3": {
-          "name": {
-            "u": ""
-          },
-          "Power": {
-            "v": 0,
-            "u": "W",
-            "d": 1
-          },
-          "Voltage": {
-            "v": 0,
-            "u": "V",
-            "d": 1
-          },
-          "Current": {
-            "v": 0,
-            "u": "A",
-            "d": 2
-          },
-          "YieldDay": {
-            "v": 0,
-            "u": "Wh",
-            "d": 0
-          },
-          "YieldTotal": {
-            "v": 0,
-            "u": "kWh",
-            "d": 3
-          }
-        }
-      },
-      "INV": {
-        "0": {
-          "Temperature": {
-            "v": 0,
-            "u": "°C",
-            "d": 1
-          }
-        }
-      },
-      "events": 0
+      "limit_relative": 100,
+      "limit_absolute": 1500
     },
     {
-      "serial": "114171603548",
-      "name": "test",
-      "data_age": 7038,
+      "serial": "1141716xxxxx",
+      "name": "Inverter 2",
+      "order": 0,
+      "data_age": 108400,
+      "poll_enabled": false,
       "reachable": false,
       "producing": false,
       "limit_relative": 0,
-      "limit_absolute": -1,
-      "AC": {
-        "0": {
-          "Power": {
-            "v": 0,
-            "u": "W",
-            "d": 1
-          },
-          "Voltage": {
-            "v": 0,
-            "u": "V",
-            "d": 1
-          },
-          "Current": {
-            "v": 0,
-            "u": "A",
-            "d": 2
-          },
-          "Power DC": {
-            "v": 0,
-            "u": "W",
-            "d": 1
-          },
-          "YieldDay": {
-            "v": 0,
-            "u": "Wh",
-            "d": 0
-          },
-          "YieldTotal": {
-            "v": 0,
-            "u": "kWh",
-            "d": 3
-          },
-          "Frequency": {
-            "v": 0,
-            "u": "Hz",
-            "d": 2
-          },
-          "PowerFactor": {
-            "v": 0,
-            "u": "",
-            "d": 3
-          },
-          "ReactivePower": {
-            "v": 0,
-            "u": "var",
-            "d": 1
-          },
-          "Efficiency": {
-            "v": 0,
-            "u": "%",
-            "d": 3
-          }
-        }
-      },
-      "DC": {
-        "0": {
-          "name": {
-            "u": "test 1"
-          },
-          "Power": {
-            "v": 0,
-            "u": "W",
-            "d": 1
-          },
-          "Voltage": {
-            "v": 0,
-            "u": "V",
-            "d": 1
-          },
-          "Current": {
-            "v": 0,
-            "u": "A",
-            "d": 2
-          },
-          "YieldDay": {
-            "v": 0,
-            "u": "Wh",
-            "d": 0
-          },
-          "YieldTotal": {
-            "v": 0,
-            "u": "kWh",
-            "d": 3
-          },
-          "Irradiation": {
-            "v": 0,
-            "u": "%",
-            "d": 3
-          }
-        },
-        "1": {
-          "name": {
-            "u": "test 2"
-          },
-          "Power": {
-            "v": 0,
-            "u": "W",
-            "d": 1
-          },
-          "Voltage": {
-            "v": 0,
-            "u": "V",
-            "d": 1
-          },
-          "Current": {
-            "v": 0,
-            "u": "A",
-            "d": 2
-          },
-          "YieldDay": {
-            "v": 0,
-            "u": "Wh",
-            "d": 0
-          },
-          "YieldTotal": {
-            "v": 0,
-            "u": "kWh",
-            "d": 3
-          },
-          "Irradiation": {
-            "v": 0,
-            "u": "%",
-            "d": 3
-          }
-        }
-      },
-      "INV": {
-        "0": {
-          "Temperature": {
-            "v": 0,
-            "u": "°C",
-            "d": 1
-          }
-        }
-      },
-      "events": 0
+      "limit_absolute": -1
+    },
+    {
+      "serial": "1141716xxxxx",
+      "name": "Inverter 3",
+      "order": 0,
+      "data_age": 108400,
+      "poll_enabled": false,
+      "reachable": false,
+      "producing": false,
+      "limit_relative": 0,
+      "limit_absolute": -1
     }
   ],
   "total": {
@@ -441,9 +120,9 @@ $ curl --no-progress-meter http://192.168.10.10/api/livedata/status | jq
       "d": 0
     },
     "YieldTotal": {
-      "v": 0,
+      "v": 2515.605957,
       "u": "kWh",
-      "d": 2
+      "d": 3
     }
   },
   "hints": {
@@ -452,6 +131,13 @@ $ curl --no-progress-meter http://192.168.10.10/api/livedata/status | jq
     "default_password": false
   }
 }
+```
+
+#### Get inverter detail livedata
+
+```bash
+$ curl http://192.168.10.10/api/livedata/status?inv=1161716xxxxx
+{"inverters":[{"serial":"1161716xxxxx","name":"Meine Solaranlage","order":0,"data_age":30824,"poll_enabled":true,"reachable":false,"producing":false,"limit_relative":100,"limit_absolute":1500,"AC":{"0":{"Power":{"v":0,"u":"W","d":1},"Voltage":{"v":0,"u":"V","d":1},"Current":{"v":0,"u":"A","d":2},"Frequency":{"v":0,"u":"Hz","d":2},"PowerFactor":{"v":0,"u":"","d":3},"ReactivePower":{"v":0,"u":"var","d":1}}},"DC":{"0":{"name":{"u":""},"Power":{"v":0,"u":"W","d":1},"Voltage":{"v":0,"u":"V","d":1},"Current":{"v":0,"u":"A","d":2},"YieldDay":{"v":0,"u":"Wh","d":0},"YieldTotal":{"v":834.2609863,"u":"kWh","d":3},"Irradiation":{"v":0,"u":"%","d":3,"max":385}},"1":{"name":{"u":""},"Power":{"v":0,"u":"W","d":1},"Voltage":{"v":0,"u":"V","d":1},"Current":{"v":0,"u":"A","d":2},"YieldDay":{"v":0,"u":"Wh","d":0},"YieldTotal":{"v":832.7069702,"u":"kWh","d":3},"Irradiation":{"v":0,"u":"%","d":3,"max":385}},"2":{"name":{"u":""},"Power":{"v":0,"u":"W","d":1},"Voltage":{"v":0,"u":"V","d":1},"Current":{"v":0,"u":"A","d":2},"YieldDay":{"v":0,"u":"Wh","d":0},"YieldTotal":{"v":843.7299805,"u":"kWh","d":3},"Irradiation":{"v":0,"u":"%","d":3,"max":385}},"3":{"name":{"u":""},"Power":{"v":0,"u":"W","d":1},"Voltage":{"v":0,"u":"V","d":1},"Current":{"v":0,"u":"A","d":2},"YieldDay":{"v":0,"u":"Wh","d":0},"YieldTotal":{"v":4.907999992,"u":"kWh","d":3}}},"INV":{"0":{"Power DC":{"v":0,"u":"W","d":1},"YieldDay":{"v":0,"u":"Wh","d":0},"YieldTotal":{"v":2515.605957,"u":"kWh","d":3},"Temperature":{"v":0,"u":"°C","d":1},"Efficiency":{"v":0,"u":"%","d":3}}},"events":2}],"total":{"Power":{"v":0,"u":"W","d":1},"YieldDay":{"v":0,"u":"Wh","d":0},"YieldTotal":{"v":2515.605957,"u":"kWh","d":3}},"hints":{"time_sync":false,"radio_problem":false,"default_password":false}}
 ```
 
 The eventlog can be fetched with the inverter serial number as parameter:
