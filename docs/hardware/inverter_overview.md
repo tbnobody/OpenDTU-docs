@@ -42,4 +42,5 @@
 | TSUN TSOL-M800       | NRF24L01+          | 2         | 2           | 1         |
 | TSUN TSOL-M1600      | NRF24L01+          | 4         | 2           | 1         |
 | E-Star HERF-800      | NRF24L01+          | 2         | 2           | 1         |
+| E-Star HERF-1600     | NRF24L01+          | 4         | 2           | 1         |
 | E-Star HERF-1800     | NRF24L01+          | 4         | 2           | 1         |
