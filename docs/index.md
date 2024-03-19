@@ -54,17 +54,8 @@ For support using OpenDTU you can find us on Github or Discord:
 [:material-github: Github Discussions][2]{target=_blank .md-button .md-button--primary }
 [:fontawesome-brands-discord: Discord Chat][3]{target=_blank .md-button .md-button--primary }
 
-## Donate
-
-The firmware is opensource and free to use!
-
-If you like this project you can show your appreciation by making a small donation.
-This will help with offsetting the cost of the different hardware devices we support.
-
-[![Buy a coffee](https://img.shields.io/badge/Kofi-donate-FF5E5B?style=for-the-badge&logo=kofi)](https://ko-fi.com/tbnobody){target=_blank}
-
 [1]: https://www.hoymiles.com/
-[2]: https://www.github.com/tbnobody/OpenDTU/discussions
+[2]: https://www.github.com/helgeerbe/OpenDTU-OnBattery/discussions
 [3]: https://discord.gg/WzhxEY62mB
 
 [^1]: Data Transfer Unit
