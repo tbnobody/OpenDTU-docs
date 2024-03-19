@@ -1,7 +1,7 @@
 # Troubleshooting
 
 * First: When there is no light on the solar panels, the inverter completely turns off and does not answer to OpenDTU! So if you assembled your OpenDTU in the evening, wait until tomorrow.
-* When there is no data received from the inverter(s) - try to reduce the distance between the openDTU and the inverter (e.g. move it to the window towards the roof)
+* When there is no data received from the inverter(s) - try to reduce the distance between the openDTU and the inverter (e.g. move it to the window towards the roof).
 * Under Settings -> DTU Settings you can increase the transmit power "PA level". Default is "minimum".
 * The NRF24L01+ needs relatively much current. With bad power supply (and especially bad cables!) a 10 µF capacitor soldered directly to the NRF24L01+ board connector brings more stability (pin 1+2 are the power supply). Note the polarity of the capacitor…
 * You can try to use an USB power supply with 1 A or more instead of connecting the ESP32 to the computer.
