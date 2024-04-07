@@ -2,7 +2,7 @@
 
 ## Read the documentation
 
-The published documentation can be found here: <https://tbnobody.github.io/OpenDTU-docs/>
+The published documentation can be found at [opendtu-onbattery.net](https://opendtu-onbattery.net/).
 
 ## Testing
 
