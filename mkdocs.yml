@@ -1,24 +1,21 @@
-edit_uri: https://github.com/tbnobody/OpenDTU-docs/edit/master/docs/
+edit_uri: https://github.com/schlimmchen/OpenDTU-OnBattery-docs/edit/main/docs/
 
-repo_url: https://github.com/tbnobody/OpenDTU
-repo_name: tbnobody/OpenDTU
+repo_url: https://github.com/helgeerbe/OpenDTU-OnBattery
+repo_name: OpenDTU-OnBattery
 
-site_name: OpenDTU Documentation
-site_description: Open Source software for ESP32 MCUs to talk to Hoymiles Inverters
-site_author: "Thomas Basler"
-copyright: Copyright &copy; 2022 - 2024 Thomas Basler and others
+site_name: OpenDTU-OnBattery Documentation
+site_description: Software for ESP32 to talk to Hoymiles Inverters and battery peripherals
+site_author: "OpenDTU Community"
+copyright: '&copy; 2024 OpenDTU Community &ndash; based on <a href="https://opendtu.solar" target="_blank">OpenDTU</a>'
 
 extra:
   social:
     - icon: material/github
-      link: https://github.com/tbnobody/OpenDTU/discussions
+      link: https://github.com/helgeerbe/OpenDTU-OnBattery/discussions
       name: GitHub Discussions
     - icon: fontawesome/brands/discord
       link: https://discord.gg/WzhxEY62mB
       name: Discord Chat
-    - name: Donate
-      link: https://ko-fi.com/tbnobody
-      icon: octicons/heart-fill-24
 
 theme:
   logo: assets/images/logo.png
