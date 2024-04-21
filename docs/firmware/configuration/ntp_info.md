@@ -2,7 +2,7 @@
 
 ## Screenshot
 
-![MQTT Information](../../assets/images/screenshots/ntp_info.png)
+![NTP Information](../../assets/images/screenshots/ntp_info.png)
 
 ## Settings / Parameters
 
@@ -24,11 +24,11 @@ Timezone description in human readable form.
 
 #### Status
 
-Shows whether the internal clock of the ESP is syned with the configured NTP server. This is required to send requests to the inverter.
+Shows whether the internal clock of the ESP is synced with the configured NTP server. This is required to send requests to the inverter.
 
 #### Local Time
 
-NTP servers provide the time in UTC[^1] time format. It is nescesary to convert the UTC time to your local time zone based on the configuration. This value should show your local time, otherwise the timezone configuration is not correct.
+NTP servers provide the time in UTC[^1] time format. It is necessary to convert the UTC time to your local time zone based on the configuration. This value should show your local time, otherwise the timezone configuration is not correct.
 
 #### Sunrise
 
