@@ -2,7 +2,7 @@
 
 ## Read the documentation
 
-The published documentation can be found here: <https://tbnobody.github.io/OpenDTU-docs/>
+The published documentation can be found here: <https://opendtu.solar/>
 
 ## Testing
 
