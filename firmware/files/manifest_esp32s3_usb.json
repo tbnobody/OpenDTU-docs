@@ -1,6 +1,6 @@
 {
     "name": "OpenDTU ESP32S3 USB",
-    "version": "24.4.12",
+    "version": "24.4.24",
     "funding_url": "https://ko-fi.com/tbnobody",
     "builds": [
       {
