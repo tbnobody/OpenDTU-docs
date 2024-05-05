@@ -9,4 +9,4 @@ Generic builds for the esp32-s3-usb are available in the OpenDTU Release section
 
 For info on where to buy this board refer to the [Where to get](https://github.com/markusdd/OpenDTUFusionDocs#where-to-get) section.
 
-OpenDTU also ships a OpenDTUFusion specific pinout JSON in it's repository which can be found here: <https://github.com/tbnobody/OpenDTU/blob/master/docs/DeviceProfiles/opendtu_fusion.json>
+OpenDTU also ships an OpenDTU Fusion specific device profile (`pin_mapping.json`) in [the code repository](https://github.com/tbnobody/OpenDTU/blob/master/docs/DeviceProfiles/opendtu_fusion.json).
