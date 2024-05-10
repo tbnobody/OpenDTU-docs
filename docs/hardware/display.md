@@ -8,11 +8,21 @@ Display settings can also be found in the [Device Manager](../firmware/configura
 
 ## Supported Models
 
+### LCD Display PCD8544
+
+* Size: 2,7"
+* Resolution: 84x48 pixel
+* Supported bus: SPI
+* Type = 1
+
+    ![SH1106](../assets/images/pcd8544-full.jpg){width=300}
+
 ### OLED Display SSD1306
 
 * Size: 0,96"
 * Resolution: 128x64 pixel
 * Supported bus: I²C
+* Type = 2
 
     ![SSD1306](../assets/images/ssd1306-full.jpg){width=300}
 
@@ -21,6 +31,7 @@ Display settings can also be found in the [Device Manager](../firmware/configura
 * Size: 1,3"
 * Resolution: 128x64 pixel
 * Supported bus: I²C
+* Type = 3
 
     ![SH1106](../assets/images/sh1106-full.png){width=300}
 
@@ -29,6 +40,7 @@ Display settings can also be found in the [Device Manager](../firmware/configura
 * Size: 2,42"
 * Resolution: 128x64 pixel
 * Supported bus: I²C
+* Type = 4
 
     ![SSD1309](../assets/images/ssd1309-full.jpg){width=300}
 
@@ -37,6 +49,7 @@ Display settings can also be found in the [Device Manager](../firmware/configura
 * Size: 2,1"
 * Resolution: 128x64 pixel
 * Supported bus: I²C
+* Type = 5
 * Datasheet: [link](../assets/datasheets/st7567s_gm12864-59n.webp){target=_blank}
 
     ![SSD1309](../assets/images/st7567s_gm12864-59n.png){width=300}
@@ -44,11 +57,3 @@ Display settings can also be found in the [Device Manager](../firmware/configura
 !!! note "Note"
 
     Due to the schematic of the display, it is not possible to turn off the backlight.
-
-### LCD Display PCD8544
-
-* Size: 2,7"
-* Resolution: 84x48 pixel
-* Supported bus: SPI
-
-    ![SH1106](../assets/images/pcd8544-full.jpg){width=300}
