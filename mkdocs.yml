@@ -108,6 +108,7 @@ nav:
       - ESP32 Modules:
         - hardware/esp32nodemcu_38pin.md
         - hardware/olimexpoeiso.md
+        - hardware/ESP32_Future_Versions_and_Memory.md
       - RF Modules:
         - hardware/nrf24l01plus.md
         - hardware/cmt2300a.md
