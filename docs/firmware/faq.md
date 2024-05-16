@@ -2,7 +2,7 @@
 
 ## Basics
 
-??? question "After a firmwware update some new features do not appear in the web interface"
+??? question "After a firmware update some new features do not appear in the web interface"
 
     Make sure you reloaded the webinterface after the firmware update. This can be achieved, depending on your browser, by pressing either ++f5++, ++ctrl+f5++ or just by clicking on the reload button.
 
