@@ -36,6 +36,11 @@
 
     Please also see [#926](https://github.com/tbnobody/OpenDTU/issues/926){target=_blank}
 
+??? question "After the OpenDTU startup the limit is stated as zero but the inverter seems to work properbly"
+
+    The limit is fetched every 2-4 minutes from the inverter. If its fetch more often the inverter will create error messages in the event log.
+    Due to the fact that on OpenDTU startup its not know when the limit was last queried, a 4-minute delay is applied before the limit will be fetched.
+
 ## Debugging
 
 ??? question "How to observe the ESP32 boot process by looking at the serial console?"
