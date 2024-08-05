@@ -31,4 +31,6 @@ jobs:
           restore-keys: |
             mkdocs-material-
 
-      - run: mkdocs gh-deploy --force
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        run: mkdocs gh-deploy --force
