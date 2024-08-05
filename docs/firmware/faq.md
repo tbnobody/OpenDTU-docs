@@ -2,7 +2,7 @@
 
 ## Basics
 
-??? question "After a firmwware update some new features do not appear in the web interface"
+??? question "After a firmware update some new features do not appear in the web interface"
 
     Make sure you reloaded the webinterface after the firmware update. This can be achieved, depending on your browser, by pressing either ++f5++, ++ctrl+f5++ or just by clicking on the reload button.
 
@@ -35,6 +35,11 @@
     Reactive power seems to scale incorrectly / be calculated incorrectly and runs up with increasing power at sunrise from 0 to 0xFFFF and remains there, which can be observed at slow sunrise and sunset again (only in the very low watt range). Since the PF is calculated from P and Q and Q is insanely high, this results in a PF of almost 0.
 
     Please also see [#926](https://github.com/tbnobody/OpenDTU/issues/926){target=_blank}
+
+??? question "After the OpenDTU startup the limit is stated as zero but the inverter seems to work properbly"
+
+    The limit is fetched every 2-4 minutes from the inverter. If its fetch more often the inverter will create error messages in the event log.
+    Due to the fact that on OpenDTU startup its not know when the limit was last queried, a 4-minute delay is applied before the limit will be fetched.
 
 ## Debugging
 
