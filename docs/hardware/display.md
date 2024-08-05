@@ -35,6 +35,13 @@ Display settings can also be found in the [Device Manager](../firmware/configura
 
     ![SH1106](../assets/images/sh1106-full.png){width=300}
 
+* Size: 1,3"
+* Resolution: 128x64 pixel
+* Supported bus: I²C (Jumper modification/soldering on PCB SPI => I2C/IIC is necessary)
+* Type = 3
+
+    ![SH1106](../assets/images/SH1106_SBC-OLED01.3.png){width=300}
+
 ### OLED Display SSD1309
 
 * Size: 2,42"
