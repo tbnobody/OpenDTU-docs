@@ -20,6 +20,7 @@
 | Hoymiles HMS-300-1T  | CMT2300A           | 1         | 1           | 1         |
 | Hoymiles HMS-350-1T  | CMT2300A           | 1         | 1           | 1         |
 | Hoymiles HMS-400-1T  | CMT2300A           | 1         | 1           | 1         |
+| Hoymiles HMS-400BM   | CMT2300A           | 1         | 1           | 1         |
 | Hoymiles HMS-450-1T  | CMT2300A           | 1         | 1           | 1         |
 | Hoymiles HMS-500-1T  | CMT2300A           | 1         | 1           | 1         |
 | Hoymiles HMS-600-2T  | CMT2300A           | 2         | 2           | 1         |
