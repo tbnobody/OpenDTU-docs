@@ -10,7 +10,7 @@ If you've installed a pre-compiled firmware in the past (a firmware file which c
 
 You can find your currently installed binary file in **Info** --> **System** --> **PIO Environment**
 
-If you have compiled the firmware by yourself, you'll find the firmware file (after a successful build process) under `.pio/build/generic/firmware.bin`.
+If you have compiled the firmware by yourself, you'll find the firmware file (after a successful build process) under `.pio/build/<environment>/firmware.bin`, where `<environment>` is your chosen PlatformIO environment, e.g., `generic_esp32`.
 
 After the successful upload, the OpenDTU immediately restarts into the new firmware.
 
