@@ -6,6 +6,9 @@
 !!! note "Hoymiles HMS-xxxx-xT-NA compatibility remark"
     You have to change the Country/Region in the [DTU settings](../firmware/configuration/dtu_settings.md#cmt2300a-regioncountry).
 
+!!! note "Inverters with integrated WiFi are not supported"
+    All inverters with integrated WiFi which can be identified by the "W" in the name (e.g. HMS-xxxW) are not supported by OpenDTU.
+
 | Model                | Required RF Module | DC Inputs | MPP-Tracker | AC Phases |
 | ---------------------| ------------------ | :-------: | :---------: | :-------: |
 | Hoymiles HM-300-1T   | NRF24L01+          | 1         | 1           | 1         |
