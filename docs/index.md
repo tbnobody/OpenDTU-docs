@@ -1,4 +1,4 @@
-# Home
+# Introduction
 
 ![Logo](assets/images/logo.png){align=right}
 

@@ -101,7 +101,7 @@ markdown_extensions:
 # Page tree
 nav:
   - Home:
-      - index.md
+      - Introduction: index.md
       - Hardware Support: hardware/index.md
       - Firmware Installation: firmware/index.md
       - Troubleshooting: troubleshooting.md
