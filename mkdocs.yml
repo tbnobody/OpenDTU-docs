@@ -103,7 +103,7 @@ nav:
   - Home:
       - index.md
       - Hardware Support: hardware/index.md
-      - Firmware Installatiion: firmware/index.md
+      - Firmware Installation: firmware/index.md
       - Troubleshooting: troubleshooting.md
   - Hardware:
       - hardware/index.md
@@ -117,9 +117,10 @@ nav:
       - hardware/led.md
       - hardware/display.md
   - Firmware:
-    - firmware/index.md
-    - firmware/webinstall.md
-    - firmware/flash_esp.md
+    - Installation:
+      - firmware/index.md
+      - firmware/flash_esp.md
+      - firmware/webinstall.md
     - firmware/wifi_setup.md
     - Web UI:
       - firmware/configuration/login.md
