@@ -10,5 +10,5 @@ At startup, when no Wi-Fi setup is found, the device will create an initial Acce
 * When OpenDTU is connected to a configured WiFI AP, the "OpenDTU-*" Access Point is closed after 3 minutes.
 
 !!! note "Note"
-    * OpenDTU needs access to a working NTP server to get the current date & time. Both are sent to the inverter with each request. Default NTP server is pool.ntp.org. If your network has different requirements please change accordingly (**Settings** --> **NTP Settings**).
+    * OpenDTU needs access to a working NTP server to get the current date & time. Both are sent to the inverter with each request. Default NTP server is `opendtu.pool.ntp.org`. If your network has different requirements please change accordingly (**Settings** --> **NTP Settings**).
     * Add your inverter in the inverter settings (**Settings** --> **Inverter Settings**)
