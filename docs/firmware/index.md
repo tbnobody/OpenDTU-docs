@@ -1,4 +1,4 @@
-# Getting Started
+# Firmware Installation
 
 ## Download Firmware
 
@@ -7,30 +7,33 @@ Page](https://github.com/tbnobody/OpenDTU/releases) (the right
 column on the projects start page). Currently there are pre-compiled binaries
 for ESP32 and ESP32-S3 MCUs.
 
-### Overview of pre-compiled binaries
-
-| Binary                                  | MCU       | Device Profile mandatory | First Flash / OTA | Comment                                   |
-| --------------------------------------- | --------- | ------------------------ | ----------------- | ----------------------------------------- |
-| opendtu-generic.bin                     | ESP32     | No                       | OTA               | Deprecated!                               |
-| opendtu-generic.factory.bin             | ESP32     | No                       | First Flash       | Deprecated!                               |
-| opendtu-generic_esp32.bin               | ESP32     | Yes                      | OTA               | This will probably be your first update   |
-| opendtu-generic_esp32.factory.bin       | ESP32     | Yes                      | First Flash       | This will probably be your first task     |
-| opendtu-generic_esp32s3.bin             | ESP32-S3  | Yes                      | OTA               | For boards with usb-uart bridge           |
-| opendtu-generic_esp32s3.factory.bin     | ESP32-S3  | Yes                      | First Flash       | For boards with usb-uart bridge           |
-| opendtu-generic_esp32s3_usb.bin         | ESP32-S3  | Yes                      | OTA               | For boards with integrated usb connection |
-| opendtu-generic_esp32s3_usb.factory.bin | ESP32-S3  | Yes                      | First Flash       | For boards with integrated usb connection |
-
-!!! note "Note"
-    All pre-compiled binaries require a mandatory [Device
-    Profile](device_profiles.md). You have to upload one after flashing the
-    firmware!
-
-## Write Firmware to ESP32
+## Factory-Binaries
 
 !!! danger "Important"
-    When flashing OpenDTU onto the ESP32 for the first time, you need to flash it over serial using the **factory** firmware binary file.
-    You need to write the factory binary to the ESP32 flash chip at address `0x0`.
+    When flashing OpenDTU onto the ESP32 for the first time, you need
+    to flash it with the **factory** firmware binary file.
 
-    The factory binary also contains a bootloader and partition scheme, which are needed to boot the ESP32.
+Binaries with `.factory` in their name include the firmware, the respective
+partition table, as well as the bootloader. Use these files to flash an ESP32
+for the first time and after erasing the flash (to start from scratch).
+
+## Overview of Firmware Variants
+
+* All binary names start with `opendtu-` and include the respective
+  PlatformIO (PIO) environment name.
+* Use the non-factory binaries to perform [OTA updates](update.md).
+
+| PIO Environment                        | MCU      | Flash Size          | Comment     |
+| -------------------------------------- | -------- | ------------------- | ----------- |
+| `generic_esp32[.factory].bin`          | ESP32    | 4&nbsp;MB           |  |
+| `generic_esp32s3[.factory].bin`        | ESP32-S3 | &ge;&nbsp;8&nbsp;MB | For boards that only have a USB-UART bridge to the ESP32-S3. |
+| `generic_esp32s3_usb[.factory].bin`    | ESP32-S3 | &ge;&nbsp;8&nbsp;MB | For boards with native USB connection. |
+| `generic[.factory].bin`                | ESP32    | 4&nbsp;MB           | [Deprecated](howto/migrate_generic.md) |
+
+!!! note "Note"
+    All firmware variants require a [Device Profile](device_profiles.md) to be
+    configured after installing the firmware.
+
+## Write Firmware to ESP32
 
 Follow the [instructions to write ESP32 flash memory](flash_esp.md).
