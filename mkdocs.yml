@@ -111,6 +111,7 @@ nav:
       - hardware/inverter_overview.md
       - ESP32 Modules:
         - hardware/esp32nodemcu_38pin.md
+        - hardware/esp32s3_devkit.md
         - hardware/olimexpoeiso.md
       - RF Modules:
         - hardware/nrf24l01plus.md
