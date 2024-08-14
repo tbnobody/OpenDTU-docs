@@ -2,9 +2,17 @@
 
 ## General information
 
-The WebApp works completly independent from the C/C++ firmware. When compiling the Firmware the pre-compiled WebApp will be embedded into the `.bin` file. The communication between the frontend and the ESP is just done using the Web API.
+The WebApp works completly independent from the C/C++ firmware. When compiling
+the firmware, the pre-compiled WebApp will be embedded into the firmware `.bin`
+file. The communication between the frontend and the ESP is just done using the
+Web API.
 
-If you've changed some of the WebApp files you have to recompile the WebApp. There is also a dev server which hosts the frontend at your local computer and allows a easy development. It will forward all the requests to the backend automatically to your ESP. That means you can develop the webinterface without flashing the ESP (if the WebAPI stays the same).
+If you've changed the WebApp, you have to (re-)compile the WebApp before building the firmware.
+
+There is also a dev server which hosts the frontend at your local computer and
+allows a easy development. It will forward all the requests to the backend
+automatically to your ESP. That means you can develop the webinterface without
+flashing the ESP (if the WebAPI stays the same).
 
 ## Install prerequisits
 
@@ -12,8 +20,9 @@ You need to install [NodeJS LTS](https://nodejs.org/en/download/){target=_blank}
 
 ## Building the WebApp
 
-The WebApp will be build using `yarn`. FIrst of all you have to install all the dependencies. Afterwards the app will be build.
-Start a Terminal of your choice and enter the following commands:
+The WebApp will be build using `yarn`. First of all you have to install all the
+dependencies. Afterwards the app will be build. Start a Terminal of your choice
+and enter the following commands:
 
 ```bash
 cd webapp
@@ -43,4 +52,12 @@ yarn dev
 
 ```bash
 yarn lint
+```
+
+## Format Source Code
+
+Automatically format the source code files to use a common format before committing changes.
+
+```bash
+yarn format
 ```
