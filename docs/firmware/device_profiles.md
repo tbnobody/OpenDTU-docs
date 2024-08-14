@@ -1,21 +1,35 @@
 # Device Profiles
 
-!!! note "Note"
+!!! note "Sample Profiles"
+    Ready-to-use device profiles can be found [in the code
+    repository](https://github.com/tbnobody/OpenDTU/tree/master/docs/DeviceProfiles){target=_blank}.
 
-    Ready to use device profiles can be found [here](https://github.com/tbnobody/OpenDTU/tree/master/docs/DeviceProfiles){target=_blank}.
+It is required to setup hardware settings like pin assignments or Ethernet
+support using a JSON file. This tells OpenDTU what peripherals are connected
+and how they are connected. The JSON file is uploaded using the
+configuration management in the web interface. Select "Pin Mapping
+(pin_mapping.json)" in the recovery section.
 
-It is possible to change hardware settings like pin assignments or ethernet support using a json file. The json file can be uploaded using the configuration management in the web interface. Just select "Pin Mapping (pin_mapping.json)" in the recovery section.
+When the file is uploaded, the ESP performs a reboot. This is required as the
+pin settings could have changed within the file and pin assignments are initialized when booting.
 
-When the file is uploaded the ESP performs a reboot. This is required as the pin settings could have changed within the file. By default all the pin assignments are used as compiled into the firmware.
+To change the device profile, navigate to **Settings** --> **Device-Manager**
+and selected the appropriate profile. When changing the device profile, the ESP reboots. You can see the current (Active) and the
+new (Selected) pin assignment in the table below the combobox.
 
-To change the device profile, navigate to the "Device Manager" and selected the appropriate profile. You can see the current (Active) and the new (Selected) in assignment in the table below the combobox.
+The JSON file can contain multiple profiles. Each profile requires a name and
+the respective parameters. If any parameter is not set, the default value `-1`
+("not in use") will be effective.
 
-## Structure of the json file
+## Structure of the JSON file
+
+!!!note "Examples"
+    These profiles are partially incomplete and merely serve as example snippets.
 
 ```json
 [
     {
-        "name": "Generic NodeMCU 38 pin",
+        "name": "Generic NodeMCU 38 pin with SSD1306 display",
         "nrf24": {
             "miso": 19,
             "mosi": 23,
@@ -23,6 +37,11 @@ To change the device profile, navigate to the "Device Manager" and selected the 
             "irq": 16,
             "en": 4,
             "cs": 5
+        },
+        "display": {
+            "type": 2,
+            "data": 21,
+            "clk": 22
         },
         "eth": {
             "enabled": false,
@@ -85,11 +104,9 @@ To change the device profile, navigate to the "Device Manager" and selected the 
 ]
 ```
 
-The json file can contain multiple profiles. Each profile requires a unique name and different parameters. If one parameter is not set, the default value, as compiled into the firmware is used. The example above shows all the currently supported values. Others may follow. Sample files for some boards can be found [in the code repository](https://github.com/tbnobody/OpenDTU/tree/master/docs/DeviceProfiles){target=_blank}. This means you can just flash the generic bin file and upload the json file. Then you select your board and everything works hopyfully as expected.
-
 !!! note "Note"
-
-    Please be aware that numerical values used in profile `.json` file are the **ESP chip GPIO numbers** (NOT phy. PIN numbers).
+    Please be aware that numerical values used in the profile `.json` file are
+    **ESP chip GPIO numbers** (NOT physical Pin numbers).
 
 ## Implemented configuration values
 
