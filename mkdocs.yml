@@ -105,6 +105,7 @@ nav:
       - Hardware Support: hardware/index.md
       - Firmware Installation: firmware/index.md
       - Troubleshooting: troubleshooting.md
+      - Frequently Asked Questions: firmware/faq.md
   - Hardware:
       - hardware/index.md
       - hardware/inverter_overview.md
@@ -153,7 +154,6 @@ nav:
     - firmware/device_profiles.md
     - firmware/mqtt_topics.md
     - firmware/web_api.md
-    - firmware/faq.md
     - Howtos:
       - firmware/howto/serial_console.md
       - firmware/howto/migrate_generic.md
