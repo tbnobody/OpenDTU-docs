@@ -4,18 +4,30 @@
     Ready-to-use device profiles can be found [in the code
     repository](https://github.com/tbnobody/OpenDTU/tree/master/docs/DeviceProfiles){target=_blank}.
 
+## Summary
+
+Perform these steps to configure pin assignments for your board:
+
+1. Upload an appropriate device profile (JSON file).
+2. Afterwards, select a profile in the Web UI Device-Manager.
+
+## Details
+
 It is required to setup hardware settings like pin assignments or Ethernet
-support using a JSON file. This tells OpenDTU what peripherals are connected
-and how they are connected. The JSON file is uploaded using the
-configuration management in the web interface. Select "Pin Mapping
-(pin_mapping.json)" in the recovery section.
+support using a JSON file. This tells OpenDTU what peripherals are
+connected and how they are connected. The JSON file is uploaded using the
+configuration management (**Settings** --> **Config Management**) in the web
+interface. Select "Pin Mapping (pin_mapping.json)" in the dropdown menu of the
+"Restore" section and choose the file to upload, then click the "Restore" button.
 
-When the file is uploaded, the ESP performs a reboot. This is required as the
-pin settings could have changed within the file and pin assignments are initialized when booting.
+After the file was uploaded, the ESP performs a reboot. This is required as the
+pin settings could have changed within the file and pin assignments are
+initialized when booting.
 
-To change the device profile, navigate to **Settings** --> **Device-Manager**
-and selected the appropriate profile. When changing the device profile, the ESP reboots. You can see the current (Active) and the
-new (Selected) pin assignment in the table below the combobox.
+To initially select or to change a device profile, navigate to **Settings** -->
+**Device-Manager** and select the appropriate profile. When changing the device
+profile, the ESP reboots. You can see the current (Active) and the new
+(Selected) pin assignment in the table below the combobox.
 
 The JSON file can contain multiple profiles. Each profile requires a name and
 the respective parameters. If any parameter is not set, the default value `-1`
