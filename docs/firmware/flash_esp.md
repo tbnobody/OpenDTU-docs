@@ -1,5 +1,23 @@
 # Flash ESP32
 
+## Multiple USB-Ports
+
+You board may be equipped with multiple USB ports. This is mostly the case for
+ESP32-S3 boards. One of the port connects to a USB-UART bridge on the board,
+while the other connects to the ESP32 natively using USB. The former port may
+be labeled "UART" or "COM" and the latter port may be labeled "USB". On some
+boards the labels are on the backside of the PCB.
+
+If you are still unsure which port is which, connect one after the other to
+your PC and observe whether one of it lists as "CP2102", "CH340", "CH341",
+"CH342", "CH343" or "CH9102". All of those are USB-UART bridges. The USB native
+port will list as "(Espressif) USB JTAG/serial debug unit" or similar.
+
+!!!note "Native Connection"
+    Prefer connecting the board using the native USB connection to your PC. It
+    is often faster to program using the native port and it should work
+    reliably to restart the ESP32 into bootloader mode.
+
 ## Bootloader Mode
 
 Before starting the flash process you may have to manually put the ESP into
