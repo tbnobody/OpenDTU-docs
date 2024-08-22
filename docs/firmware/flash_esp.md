@@ -1,18 +1,26 @@
 # Flash ESP32
 
-## Prepare
+## Bootloader Mode
 
 Before starting the flash process you may have to manually put the ESP into
-*bootloader mode*. Most boards are able to do this automatically, but sometimes
-that is not working:
+*bootloader mode*. Most boards can be restarted into bootloader mode by the
+flash utility automatically, but sometimes that is not working.
 
-1. Connect `GPIO0` to `GND` before booting the device (often there is a `BOOT` or similar button which does this when pressed)
-2. Power-on or reset the ESP32 while `GPIO0` is connected to `GND`
-3. Start the flash process
+1. Press and hold the `BOOT` button on your board. This effectively connects
+   the ESP32's `GPIO0` with `GND`. If your board has no `BOOT` button, connect
+   `GPIO0` to `GND` using a wire.
+2. Reset the ESP32 while holding the `BOOT` button.
+    * Preferably, use your board's `RESET` (sometimes `RST`) button to perform
+      the reset. Press it once.
+    * Alternatively, perform a power-on reset: Disconnect the power supply and
+      make sure that the board is not powered from any other source. Reconnect
+      the power supply, possibly by plugging in the USB cable.
+3. Release the `BOOT` button.
 
 ## Write to Flash Memory
 
-The actual procedure to flash the ESP32 depends on the tool used. Click on the tab below that matches your flash tool.
+The actual procedure to flash the ESP32 depends on the tool used. Click on the
+tab below that matches your flash tool.
 
 === "Web Flasher :material-linux::material-apple::material-microsoft-windows:"
 
