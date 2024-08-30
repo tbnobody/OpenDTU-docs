@@ -2,24 +2,25 @@
 
 ## Step by Step
 
-1. Install [Visual Studio Code](https://code.visualstudio.com/download){target=_blank} (vscode).
-2. In vscode, install the [PlatformIO
-   Extension](https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide){target=_blank}
-3. Install GIT and enable GIT in vscode -
-   [Download](https://git-scm.com/downloads/){target=_blank} -
-   [Instructions](https://www.jcchouinard.com/install-git-in-vscode/){target=_blank}
-4. Clone the [code repository](https://github.com/tbnobody/OpenDTU).
-   You really have to clone it, do not download and extract a source ZIP file.
-   During the build process the GIT hash gets embedded into the firmware. If you
-   download and extract the source ZIP file a build error will occur.
-5. In vscode, choose **File** --> **Open Folder** and select the previously
-   downloaded source code (you have to select the folder which contains the
-   `platformio.ini` and `platformio_override.ini` files).
-6. Adjust the COM port in the file `platformio_override.ini` for your
-   USB-to-serial-converter. It occurs twice:
-    * `upload_port`
-    * `monitor_port`
-7. Select the arrow button in the blue bottom status bar (PlatformIO: Upload) to
+1. [Download](https://git-scm.com/downloads/){target=_blank} and install Git.
+2. Install [Visual Studio Code](https://code.visualstudio.com/download){target=_blank} (vscode).
+3. In vscode, install the [PlatformIO
+   Extension](https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide){target=_blank}.
+4. ![Clone Source Code](../assets/images/firmware/vscode_clone.png){align=right}
+   Clone the source code repository. Select the `Source Control` tab on the
+   left, click `Clone Repository`, and enter the URL
+   `https://github.com/tbnobody/OpenDTU`. You really have to clone
+   the source code repository. Do not download and extract a source ZIP file.
+   During the build process the Git hash is embedded into the firmware. If you
+   merely download and extract the source ZIP file a build error will occur, as
+   no Git status can be determined.
+5. Adjust the upload and monitoring port to your system by clicking the plug
+   icon in vscode's bottom statusbar and selecting the respective serial port.
+   ![Set Serial Port](../assets/images/firmware/vscode_port.png)
+6. Unless you want to compile the default firmware variant, select the
+   appropriate PlatformIO environment in vscode's bottom statusbar.
+   ![Select Environment](../assets/images/firmware/vscode_environment.png)
+7. Click the arrow button in vscode's bottom status bar (PlatformIO: Upload) to
    compile and upload the firmware. During the compilation, all required
    libraries are downloaded automatically.
 
