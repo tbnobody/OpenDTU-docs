@@ -3,11 +3,13 @@
 ## Step by Step
 
 1. Install [PlatformIO Core](https://platformio.org/install/cli){target=_blank} (PIO).
-2. Clone the [code repository](https://github.com/tbnobody/OpenDTU).
-   You really have to clone it, do not download and extract a source ZIP file.
-   During the build process the GIT hash gets embedded into the firmware. If you
-   download and extract the source ZIP file a build error will occur.
-3. Adjust the COM port in file `platformio_override.ini`. It occurs twice:
+2. Clone the [source code repository](https://github.com/tbnobody/OpenDTU).
+   You really have to clone the source code repository. Do not download and
+   extract a source ZIP file. During the build process the Git hash is embedded
+   into the firmware. If you merely download and extract the source ZIP file a
+   build error will occur, as no Git status can be determined.
+3. Adjust the serial port in file `platformio_override.ini` to your setup. The
+   setting occurs twice:
     * `upload_port`
     * `monitor_port`
 4. Build the firmware: `platformio run -e generic_esp32` (chose a suitable PIO environment)
