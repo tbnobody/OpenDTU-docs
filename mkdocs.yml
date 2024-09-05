@@ -169,3 +169,4 @@ nav:
       - 3rd_party/related.md
       - 3rd_party/cases.md
       - 3rd_party/pcb.md
+      - 3rd_party/prometheus_database.md
