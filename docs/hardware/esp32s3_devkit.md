@@ -6,9 +6,11 @@ guide](https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/hw-referenc
 
 !!!warning
     Modules with 8 MB of PSRAM or 16 MB or more of flash memory use an octal
-    SPI interface. Pins GPIO35, GPIO36 and GPIO37 are used for the internal
-    communication between ESP32-S3 and SPI flash/PSRAM memory, thus not
-    available for external use.
+    SPI interface. On these modules, pins GPIO 35, 36, and 37, which are
+    usually wired to the DevKit board's pin header, are in use for the internal
+    communication between ESP32-S3 and SPI flash/PSRAM memory. Thus these pins
+    are **not** available for external use, even though they are wired to the
+    DevKit board's pin header.
 
 ## Overview
 
