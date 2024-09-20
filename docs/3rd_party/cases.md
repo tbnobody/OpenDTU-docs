@@ -1,5 +1,6 @@
 # Available cases
 
+* [ESP32-S3 DevKitC + NRF24](https://www.thingiverse.com/thing:6734089){target=_blank}
 * [Open DTU box](https://www.thingiverse.com/thing:5435911){target=_blank}
 * [Sól: OpenDTU (ESP32 / NRF24L01+) case](https://www.printables.com/model/293003-sol-opendtu-esp32-nrf24l01-case){target=_blank}
 * [Complete solderless case for Olimex ESP32-POE-ISO](https://www.thingiverse.com/thing:5661780){target=_blank}
