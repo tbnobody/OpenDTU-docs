@@ -7,7 +7,7 @@ At startup, when no Wi-Fi setup is found, the device will create an initial Acce
 * Navigate to **Settings** --> **Network Settings** and enter your WiFi credentials. The username to access the config menu is "admin" and the password the same as for accessing the Access Point (default: `openDTU42`).
 * OpenDTU then simultaneously connects to your WiFi AP with these credentials. Navigate to **Info** --> **Network** and look into section "Network Interface (Station)" for the IP address received via DHCP.
 * If your WiFi AP uses an allow-list for MAC-addresses, please be aware that the ESP32 has two different MAC addresses for its AP and client modes, they are also listed at **Info** --> **Network**.
-* When OpenDTU is connected to a configured WiFI AP, the "OpenDTU-*" Access Point is closed after 3 minutes.
+* When OpenDTU is connected to a configured WiFI AP, the "OpenDTU-*" Access Point is closed after 3 minutes (timeout is configurable).
 
 !!! note "Note"
     * OpenDTU needs access to a working NTP server to get the current date & time. Both are sent to the inverter with each request. Default NTP server is `opendtu.pool.ntp.org`. If your network has different requirements please change accordingly (**Settings** --> **NTP Settings**).
