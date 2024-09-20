@@ -65,3 +65,12 @@ Powered by [ESP Web Tools](https://esphome.github.io/esp-web-tools/){target=_bla
     ));
 </script>
 <script type="module" src="https://unpkg.com/esp-web-tools@8.0.1/dist/web/install-button.js?module"></script>
+
+## Troubleshooting
+
+* It might be required to manually [enter bootloader mode](flash_esp.md#bootloader-mode)
+  before attempting to flash the ESP32 using the WebFlasher.
+* Try holding the `BOOT` button on your board until you see the WebFlasher is
+  erasing the flash memory and actually installing the firmware. This can help
+  when a reset is performed in the preparation step, as holding the `BOOT`
+  button ensures that the ESP32 restarts into bootloader mode.
