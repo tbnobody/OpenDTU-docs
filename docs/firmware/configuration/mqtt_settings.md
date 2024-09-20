@@ -99,7 +99,7 @@ Sets the QoS of the LWT topic.
 
 This settings are only visible if [Enable Home Assistant MQTT Auto Discovery](#enable-home-assistant-mqtt-auto-discovery) is enabled.
 
-Home Assistant provide the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/){target=_blank} and through this integration it is possible to exploit and manage the messages published by OpenDTU.
+Home Assistant provides the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/){target=_blank} and through this integration it is possible to exploit and manage the messages published by OpenDTU.
 Once this integration on home assistant is configured with the same MQTT broker, it is possible to create devices manually or through the autodiscovery function.
 
 #### Prefix Topic :material-form-textbox:{title="Textbox"}
