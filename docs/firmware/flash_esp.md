@@ -20,6 +20,12 @@ The actual procedure to flash the ESP32 depends on the tool used. Click on the t
 
     The easiest, platform independent method. Requires Chrome based browser.
 
+=== "Espressif Web Flasher :material-linux::material-apple::material-microsoft-windows:"
+    [Espressif Web Flasher](https://espressif.github.io/esptool-js/){target=_blank}
+    Platform-independent method. Requires Chrome or Edge browser. Allows to
+    install arbitrary firmware binaries. Flash factory binaries to address
+    `0x0` and non-factory binaries to address `0x10000`.
+
 === "ESP Flash Tools :material-microsoft-windows:"
     Espressif provides their own [Flash Download Tools](https://www.espressif.com/en/support/download/other-tools){target=_blank} for Windows.
 
