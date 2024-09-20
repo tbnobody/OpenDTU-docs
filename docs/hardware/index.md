@@ -19,6 +19,13 @@ Boards with Ethernet-Connector and Power-over-Ethernet are also supported. For e
 
 ## Steps to build your own DTU
 
+!!!note "Use of GPIOs"
+    In general, ESP32 chips allow to use any function on any GPIO pin. There
+    are a few restrictions, which are documented at the respective ESP32(-S3)
+    DevKit subpages. Freely wire the logic pins between your ESP32(-S3) module
+    and peripheral components. The important bit is to create and use a
+    matching [device profile](../firmware/device_profiles.md).
+
 1. Determine the [RF module](inverter_overview.md) you need
 2. Get a ESP32 module.
 3. Use a power suppy with 5 V and 1 A. The USB cable connected to your PC/Notebook may be powerful enough or may be not. Also the quality of the used USB cable might have an impact.
@@ -26,4 +33,6 @@ Boards with Ethernet-Connector and Power-over-Ethernet are also supported. For e
 5. Wire a optional [display](display.md)
 6. Wire optional [LEDs](led.md)
 7. [Flash](../firmware/flash_esp.md) the firmware via USB
-8. Upload a [device profile](../firmware/device_profiles.md) which describes your hardware (or look at the profile first and connect your pins accordingly) using the [Config Managment](../firmware/configuration/config_settings.md)
+8. Create, upload, and select a matching [device profile](../firmware/device_profiles.md)
+   which describes your hardware (or look at a profile first and connect the
+   logic pins accordingly).
