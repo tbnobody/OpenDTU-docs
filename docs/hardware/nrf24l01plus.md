@@ -16,13 +16,14 @@ There are several variants with different qualities and prices. Most of them are
 Buy your hardware from a trusted source, at best from a dealer/online shop in your country where you have support and the right to return non-functional hardware.
 When you want to buy from Amazon, AliExpress, eBay etc., take note that there is a lot of low-quality or fake hardware offered. Read customer comments and ratings carefully!
 
-A heavily incomplete list of trusted hardware shops in germany is:
+A heavily incomplete list of trusted hardware shops in Germany is:
+
+!!!note "Affiliation"
+    This list is for your convenience only, the project is not related to any of these shops.
 
 * [AZ-Delivery](https://www.az-delivery.de/)
 * [Makershop](https://www.makershop.de/)
 * [Berrybase](https://www.berrybase.de/)
-
-This list is for your convenience only, the project is not related to any of these shops.
 
 ## Pictures
 
