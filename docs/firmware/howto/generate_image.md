@@ -1,5 +1,8 @@
 # Generate pre-configured image
 
+!!! note "Howto is deprecated"
+    The steps in this howto are no more required. If the `data` folder with files exists in the main directory, the files are automatically embedded into the `.factory.bin` file.
+
 ## Introduction
 
 This howto explains how to generate a image (`.bin` file) containing a custom `pin_mapping.json` or pre-configured `config.json`. You have to compile OpenDTU using [VSCode](../compile_vscode.md).
