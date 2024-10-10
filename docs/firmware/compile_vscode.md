@@ -37,5 +37,5 @@ requires a logout/login of the affected user).
 
 There are two videos showing these steps:
 
-    * [Git Clone and compilation](https://youtu.be/9cA_esv3zeA){target=_blank}
-    * [Full installation and compilation](https://youtu.be/xs6TqHn7QWM){target=_blank}
+* [Git Clone and compilation](https://youtu.be/9cA_esv3zeA){target=_blank}
+* [Full installation and compilation](https://youtu.be/xs6TqHn7QWM){target=_blank}
