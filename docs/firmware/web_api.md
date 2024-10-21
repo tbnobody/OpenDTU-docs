@@ -11,10 +11,10 @@ may be incomplete
 
 | GET/POST | Auth required | URL |
 | -------- | --- | -- |
-| Get      | yes | /api/config/get |
-| Post     | yes | /api/config/delete |
-| Get      | yes | /api/config/list |
-| Post     | yes | /api/config/upload |
+| Get      | yes | /api/file/get |
+| Post     | yes | /api/file/delete |
+| Get      | yes | /api/file/list |
+| Post     | yes | /api/file/upload |
 | Get+Post | yes | /api/device/config |
 | Get      | no  | /api/devinfo/status |
 | Get+Post | yes | /api/dtu/config |
