@@ -8,13 +8,13 @@
 
 ### Backup: Configuration File Backup
 
-#### Backup the configuration file :material-form-dropdown:{title="Dropdown"}
+#### Delete :material-button-cursor:{title="Button"}
 
-Select the configuration file which you want to download.
+Click the red trash download button delete the selected config file from the device.
 
-#### Backup :material-button-cursor:{title="Button"}
+#### Download :material-button-cursor:{title="Button"}
 
-Press this button to download the previously selected config file. The format of this file is `.json` and can be opened with any text editor.
+Click the blue download button to download the selected config file. The format of this file is `.json` and can be opened with any text editor.
 
 ### Restore: Restore the Configuration File
 
@@ -22,8 +22,9 @@ Press this button to download the previously selected config file. The format of
 
 Select the file type which you are going to upload. The following values are possible:
 
-* Main Config (config.json): A config file which was [previously backuped](#backup-configuration-file-backup)
-* Pin Mapping (pin_mapping.json): A [Device Profile](../device_profiles.md) configuration file.
+* Main Config (`config.json`): A config file which was [previously backuped](#backup-configuration-file-backup)
+* Pin Mapping (`pin_mapping.json`): A [Device Profile](../device_profiles.md) configuration file.
+* Language Pack (`pack.lang.json`): A [Language Pack](../language_pack.md) which contains translations for the web app.
 
 !!! warning "Warning"
 
@@ -41,5 +42,5 @@ Press this button to upload the selected source file to the specified target fil
 
 #### Restore Factory-Default Settings :material-button-cursor:{title="Button"}
 
-This will delete the `config.json` file on the internal memory and therefor reset all settings to it's defaults. The `pin_mapping.json` file is preserved but the previously selected [Device Profile](../device_profiles.md) is set to default values.
+This will delete the `config.json` file and the `pack.lang.json` file on the internal memory and therefor reset all settings to it's defaults. The `pin_mapping.json` file is preserved but the previously selected [Device Profile](../device_profiles.md) is set to default values.
 After deleting all settings a automatic reboot is performed and the [initial Access Point](../wifi_setup.md) is opened again.

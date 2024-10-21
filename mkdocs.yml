@@ -153,6 +153,7 @@ nav:
       - firmware/configuration/about.md
     - firmware/update.md
     - firmware/device_profiles.md
+    - firmware/language_pack.md
     - firmware/mqtt_topics.md
     - firmware/web_api.md
     - Howtos:
