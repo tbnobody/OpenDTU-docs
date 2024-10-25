@@ -18,6 +18,19 @@ The language pack contains a `meta` section with the following parameters:
 * `name`: Human readable name of the language. Will be used in the frontend (Should be in the appropriate language)
 * `code`: Set 1 ISO[^1] code of the language
 
+### Display data
+
+The `display` section contains all the translation keys used for externally connected displays. The following parameters are used:
+
+* `date_format`: "%d/%m/%Y %H:%M",
+* `offline`: Text if the invters are offline,
+* `power_w`: Text for current power in W. A float gets injected and can be formatted[^2] (e.g. `%.0f`)
+* `power_kw`: Text for current power in W. A float gets injected and can be formatted[^2] (e.g. `%.1f`)
+* `yield_today_wh`: Text for daily production in Wh. A float gets injected and can be formatted[^2] (e.g. `%4.0f`)
+* `yield_today_kwh`: Text for daily production in kWh. A float gets injected and can be formatted[^2] (e.g. `%.1f`)
+* `yield_total_kwh`: Text for total production in kWh and one decimal places. A float gets injected and can be formatted[^2] (e.g. `%.1f`)
+* `yield_total_mwh`: Text for total production in kWh and zero decimal places. A float gets injected and can be formatted[^2] (e.g. `%.0f`)
+
 ### WebApp data
 
 The `webapp` section contains all the translation keys as used in the web app.
@@ -30,6 +43,10 @@ The `webapp` section contains all the translation keys as used in the web app.
         "name": "Italiano",
         "code": "it"
     },
+    "display": {
+        "date_format": "%d/%m/%Y %H:%M",
+        ...
+    },
     "webapp": {
         "menu": {
             ...
@@ -40,3 +57,4 @@ The `webapp` section contains all the translation keys as used in the web app.
 ```
 
 [^1]: [ISO 639 language codes](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes){target=_blank}
+[^2]: [Printf format specifier](https://en.wikipedia.org/wiki/Printf#Format_specifier){target=_blank}
