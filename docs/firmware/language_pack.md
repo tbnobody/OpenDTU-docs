@@ -6,8 +6,9 @@
 
 ## Summary
 
-Language packs currently contain the translations for the web interface.
-Additional translations for e.g. the display will follow.
+Language packs currently contain the translations for the web interface and
+the display.
+Additional translations for e.g. the event log will follow.
 
 ## File structure
 
