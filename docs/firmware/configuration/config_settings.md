@@ -26,9 +26,9 @@ Select the file type which you are going to upload. The following values are pos
 * Pin Mapping (`pin_mapping.json`): A [Device Profile](../device_profiles.md) configuration file.
 * Language Pack (`pack.lang.json`): A [Language Pack](../language_pack.md) which contains translations for the web app.
 
-!!! warning "Warning"
+!!! info "Info"
 
-    There is no further check if the uploaded file is valid. Properly check your settings!
+    If the `.json` file is not parseable or does not match the selected type the upload will be denied.
 
 #### Source file selection :material-file-upload:{title="File"}
 
