@@ -26,7 +26,7 @@ Open Source software to talk to [Hoymiles][1]{target=_blank} solar inverters. It
 * Time zone support
 * Ethernet support
 * [Prometheus API endpoint](3rd_party/prometheus_database.md) (/api/prometheus/metrics)
-* English, german and french web interface
+* English, german and french web interface (additional languages can be installed by uploading a [language pack](firmware/language_pack.md))
 * Displays (SSD1306, SH1106, PCD8544)
 * Status LEDs
 * Configuration management (export / import configurations)
