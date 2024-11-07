@@ -10,6 +10,13 @@ Language packs currently contain the translations for the web interface and
 the display.
 Additional translations for e.g. the event log will follow.
 
+## Installation / Upload of language packs
+
+language packs can be uploaded to the device using the "Config Management" function.
+Select "Language Pack" in the restore section, select a .json file containing your
+language and press "Restore".
+Afterwards all language selection drop down menues contain the new language.
+
 ## File structure
 
 ### Meta data
