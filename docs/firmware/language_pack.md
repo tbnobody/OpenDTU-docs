@@ -2,7 +2,7 @@
 
 !!! note "Available language packs"
     Ready-to-use language packs can be found [in the code
-    repository](https://github.com/tbnobody/OpenDTU/lang){target=_blank}.
+    repository](https://github.com/tbnobody/OpenDTU/tree/master/lang){target=_blank}.
 
 ## Summary
 
