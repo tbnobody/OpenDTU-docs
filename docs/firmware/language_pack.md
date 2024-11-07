@@ -12,7 +12,7 @@ Additional translations for e.g. the event log will follow.
 
 ## Installation / Upload of language packs
 
-language packs can be uploaded to the device using the "Config Management" function.
+Language packs can be uploaded to the device using the [Config Management](configuration/config_settings.md) function.
 Select "Language Pack" in the restore section, select a .json file containing your
 language and press "Restore".
 Afterwards all language selection drop down menues contain the new language.
