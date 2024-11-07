@@ -24,13 +24,17 @@ The table shows all available pin configurations and how they are assigned curre
 
 This settings apply to a properbly connected display. See [Device Profiles](../device_profiles.md) for display types and pin assignment.
 
-#### Enable Power Save :material-toggle-switch:{title="Switch"}
+#### Switch off if no solar :material-toggle-switch:{title="Switch"}
 
 Turns off the display if no inverter is producing.
 
-#### Enable Screensaver :material-toggle-switch:{title="Switch"}
+#### OLED Anti burn-in :material-toggle-switch:{title="Switch"}
 
 Move the display a little bit on each update to prevent burn-in. This is useful especially for OLED displays.
+
+#### Diagram mode :material-form-dropdown:{title="Dropdown"}
+
+Allows to hide the diagram (`Off`), display it in parallel to the yield values (`Small`) or toggle between yield values and full screen diagram (`Fullscreen`)
 
 #### Diagram duration :material-form-textbox:{title="Textbox"}
 

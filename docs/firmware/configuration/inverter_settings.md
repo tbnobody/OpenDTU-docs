@@ -98,6 +98,12 @@ Sets runtime data (like current power, voltage, temperature, frequency but NO yi
 
 Sets runtime data (like current power, voltage, temperature, frequency but NO yield data) to zero at midnight.
 
+##### Clear Eventlog at midnight :material-toggle-switch:{title="Switch"}
+
+The content of the event log view will be erased at midnight.
+This only takes into account the log entries that are held in the DTU.
+If the inverter runs overnight (e.g. on a battery), the entries are immediately read from the inverter again.
+
 ##### Yield Day Correction :material-toggle-switch:{title="Switch"}
 
 By default, the daily yield is reset when the inverter is restarted. This is handled at the inverter itself. On a cloudy day it can happen that the inverter restarts multiple times during dawn. This leads to the effect that the daily yield is already displayed as zero in the evening. If this setting is activated, the DTU remembers the totalised daily yield value generated (between restarts of the inverter) until midnight.
