@@ -15,7 +15,7 @@ Additional translations for e.g. the event log will follow.
 Language packs can be uploaded to the device using the [Config Management](configuration/config_settings.md) function.
 Select "Language Pack" in the restore section, select a .json file containing your
 language and press "Restore".
-Afterwards all language selection drop down menues contain the new language.
+Afterwards all language selection drop-down menus contain the new language.
 
 ## File structure
 
@@ -31,13 +31,13 @@ The language pack contains a `meta` section with the following parameters:
 The `display` section contains all the translation keys used for externally connected displays. The following parameters are used:
 
 * `date_format`: "%d/%m/%Y %H:%M",
-* `offline`: Text if the invters are offline,
+* `offline`: Text if the inverters are offline,
 * `power_w`: Text for current power in W. A float gets injected and can be formatted[^2] (e.g. `%.0f`)
-* `power_kw`: Text for current power in W. A float gets injected and can be formatted[^2] (e.g. `%.1f`)
+* `power_kw`: Text for current power in kW. A float gets injected and can be formatted[^2] (e.g. `%.1f`)
 * `yield_today_wh`: Text for daily production in Wh. A float gets injected and can be formatted[^2] (e.g. `%4.0f`)
 * `yield_today_kwh`: Text for daily production in kWh. A float gets injected and can be formatted[^2] (e.g. `%.1f`)
-* `yield_total_kwh`: Text for total production in kWh and one decimal places. A float gets injected and can be formatted[^2] (e.g. `%.1f`)
-* `yield_total_mwh`: Text for total production in kWh and zero decimal places. A float gets injected and can be formatted[^2] (e.g. `%.0f`)
+* `yield_total_kwh`: Text for total production in kWh and one decimal place. A float gets injected and can be formatted[^2] (e.g. `%.1f`)
+* `yield_total_mwh`: Text for total production in MWh and zero decimal places. A float gets injected and can be formatted[^2] (e.g. `%.0f`)
 
 ### WebApp data
 
