@@ -32,13 +32,17 @@ The `display` section contains all the translation keys used for externally conn
 
 * `date_format`: "%d/%m/%Y %H:%M" or similar, see `strftime` format or consult
   [a cheat sheet](https://devhints.io/strftime){target=_blank}
-* `offline`: Text if the inverters are offline,
-* `power_w`: Text for current power in W. A float gets injected and can be formatted[^2] (e.g. `%.0f`)
-* `power_kw`: Text for current power in kW. A float gets injected and can be formatted[^2] (e.g. `%.1f`)
-* `yield_today_wh`: Text for daily production in Wh. A float gets injected and can be formatted[^2] (e.g. `%4.0f`)
-* `yield_today_kwh`: Text for daily production in kWh. A float gets injected and can be formatted[^2] (e.g. `%.1f`)
-* `yield_total_kwh`: Text for total production in kWh and one decimal place. A float gets injected and can be formatted[^2] (e.g. `%.1f`)
-* `yield_total_mwh`: Text for total production in MWh and zero decimal places. A float gets injected and can be formatted[^2] (e.g. `%.0f`)
+* `offline`: Text if the inverters are offline
+
+The following parameters shall contain text (a label) and a format
+specifier[^2] like `%.1f` to format the respective floating point value:
+
+* `power_w`: Current inverter output power in W
+* `power_kw`: Current inverter output power in kW
+* `yield_today_wh`: Inverter daily yield in Wh
+* `yield_today_kwh`: Inverter daily yield in kWh
+* `yield_total_kwh`: Inverter total yield in kWh and one decimal place
+* `yield_total_mwh`: Inverter total yield in MWh and zero decimal places
 
 ### WebApp data
 
