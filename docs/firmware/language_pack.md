@@ -30,7 +30,8 @@ The language pack contains a `meta` section with the following parameters:
 
 The `display` section contains all the translation keys used for externally connected displays. The following parameters are used:
 
-* `date_format`: "%d/%m/%Y %H:%M",
+* `date_format`: "%d/%m/%Y %H:%M" or similar, see `strftime` format or consult
+  [a cheat sheet](https://devhints.io/strftime){target=_blank}
 * `offline`: Text if the inverters are offline,
 * `power_w`: Text for current power in W. A float gets injected and can be formatted[^2] (e.g. `%.0f`)
 * `power_kw`: Text for current power in kW. A float gets injected and can be formatted[^2] (e.g. `%.1f`)
