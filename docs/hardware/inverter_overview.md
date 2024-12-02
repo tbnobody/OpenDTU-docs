@@ -24,7 +24,7 @@
 | Hoymiles HMS-350-1T  | CMT2300A           | 1         | 1           | 1         | `1124`                 |
 | Hoymiles HMS-400-1T  | CMT2300A           | 1         | 1           | 1         | `1124`                 |
 | Hoymiles HMS-400BM   | CMT2300A           | 1         | 1           | 1         | `1124`                 |
-| Hoymiles HMS-450-1T  | CMT2300A           | 1         | 1           | 1         | `1124`                 |
+| Hoymiles HMS-450-1T  | CMT2300A           | 1         | 1           | 1         | `1124`, `1400`         |
 | Hoymiles HMS-500-1T  | CMT2300A           | 1         | 1           | 1         | `1124`, `1125`         |
 | Hoymiles HMS-600-2T  | CMT2300A           | 2         | 2           | 1         | `1143`, `1144`, `1410` |
 | Hoymiles HMS-700-2T  | CMT2300A           | 2         | 2           | 1         | `1143`, `1144`, `1410` |
