@@ -1,0 +1,1078 @@
+openapi: 3.0.3
+info:
+  title: OpenDTU
+  description: >-
+    The WebAPI is used to control OpenDTU using the integrated WebApp.
+
+  license:
+    name: GNU General Public License, Version 2
+    url: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+  version: 2025.1.14
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
+servers:
+  - url: "{protocol}://{IP}:{port}"
+    variables:
+      protocol:
+        enum:
+          - http
+          - https
+        default: http
+      IP:
+        default: 192.168.1.1
+      port:
+        default: "80"
+tags:
+  - name: Inverter
+    description: Inverter related configuration and information
+  - name: System status
+    description: General system information
+  - name: Prometheus
+    description: Endpoint for Prometheus metrics
+  - name: DTU
+    description: DTU related configuration
+  - name: MQTT
+    description: MQTT related configuration and status
+  - name: NTP
+    description: Clock related configuration and status
+  - name: Network
+    description: Network related configuration and status
+  - name: Hardware
+    description: Hardware settings
+  - name: Security
+    description: DTU Security settings
+  - name: File
+    description: Config file management
+  - name: Firmware upgrade
+    description: Firmware upload
+  - name: i18n
+    description: Localization settings
+
+paths:
+  /api/system/status:
+    get:
+      tags:
+        - System status
+      summary: Retrieve general system runtime information
+      security:
+        - ReadOnlyAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/prometheus/metrics:
+    get:
+      tags:
+        - Prometheus
+      summary: Retrieve prometheus runtime information
+      security:
+        - ReadOnlyAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/dtu/config:
+    get:
+      tags:
+        - DTU
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+    post:
+      tags:
+        - DTU
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/maintenance/reboot:
+    post:
+      tags:
+        - DTU
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/mqtt/status:
+    get:
+      tags:
+        - MQTT
+      summary: Retrieve MQTT runtime information
+      security:
+        - ReadOnlyAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  mqtt_enabled:
+                    type: boolean
+                    example: true
+                  mqtt_hostname:
+                    type: string
+                    example: broker
+                  mqtt_port:
+                    type: number
+                    example: 1883
+                  mqtt_clientid:
+                    type: string
+                    example: opendtu-123456
+                  mqtt_username:
+                    type: string
+                    example: opendtu
+                  mqtt_topic:
+                    type: string
+                    example: solar/
+                  mqtt_connected:
+                    type: boolean
+                    example: true
+                  mqtt_retain:
+                    type: boolean
+                    example: true
+                  mqtt_tls:
+                    type: boolean
+                    example: false
+                  mqtt_root_ca_cert_info:
+                    type: string
+                    example: |
+                      cert. version     : 3
+                      serial number     : 82:10:CF:B0:D2:40:E3:59:44:63:E0:BB:63:82:8B:00
+                      issuer name       : C=US, O=Internet Security Research Group, CN=ISRG Root X1
+                      subject name      : C=US, O=Internet Security Research Group, CN=ISRG Root X1
+                      issued  on        : 2015-06-04 11:04:38
+                      expires on        : 2035-06-04 11:04:38
+                      signed using      : RSA with SHA-256
+                      RSA key size      : 4096 bits
+                      basic constraints : CA=true
+                      key usage         : Key Cert Sign, CRL Sign
+                  mqtt_tls_cert_login:
+                    type: boolean
+                    example: false
+                  mqtt_client_cert_info:
+                    type: string
+                    example: ''
+                  mqtt_lwt_topic:
+                    type: string,
+                    example: solar/status
+                  mqtt_publish_interval:
+                    type: number
+                    example: 10
+                  mqtt_clean_session:
+                    type: boolean
+                    example: true
+                  mqtt_hass_enabled:
+                    type: boolean
+                    example: true
+                  mqtt_hass_expire:
+                    type: boolean
+                    example: false
+                  mqtt_hass_retain:
+                    type: boolean
+                    example: false
+                  mqtt_hass_topic:
+                    type: string
+                    example: homeassistant/
+                  mqtt_hass_individualpanels:
+                    type: boolean
+                    example: true
+
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/mqtt/config:
+    get:
+      tags:
+        - MQTT
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+    post:
+      tags:
+        - MQTT
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/ntp/status:
+    get:
+      tags:
+        - NTP
+      summary: Retrieve NTP runtime information
+      security:
+        - ReadOnlyAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ntp_server:
+                    type: string
+                    description: Hostname or IP of the configured NTP server
+                    example: opendtu.pool.ntp.org
+                  ntp_timezone:
+                    type: string
+                    description: Posix timezone string
+                    example: CET-1CEST,M3.5.0,M10.5.0/3
+                  ntp_timezone_descr:
+                    type: string
+                    description: Description of the time zone
+                    example: Europe/Berlin
+                  ntp_status:
+                    type: boolean
+                    description: Returns whether the internal clock is synced
+                  ntp_localtime:
+                    type: string
+                    description: The time of the currently configured time zone
+                    example: Thursday, January 16 2025 19:22:33
+                  sun_risetime:
+                    type: string
+                    description: Time of sun rise based on configured location information and time zone
+                    example: Thursday, January 16 2025 06:45:00
+                  sun_settime:
+                    type: string
+                    description: Time of sun set based on configured location information and time zone
+                    example: Thursday, January 16 2025 17:57:00
+                  sun_isSunsetAvailable:
+                    type: boolean
+                    description: Returns `true` if a sun set / sun rise event is possible for the specified location (e.g. Norway in summer)
+                  sun_isDayPeriod:
+                    type: boolean
+                    description: Returns `true` if the current time is between sun set time and sun rise time
+
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/ntp/config:
+    get:
+      tags:
+        - NTP
+      summary: Retrieve current NTP configuration
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NtpConfig"
+
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+    post:
+      tags:
+        - NTP
+      summary: Save NTP configuration
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      requestBody:
+        description: The JSON code has to be embedded into the url encoded body!
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                data:
+                  $ref: "#/components/schemas/NtpConfig"
+            encoding:
+              data:
+                contentType: application/json
+
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NtpConfig"
+
+      responses:
+        "200":
+          $ref: "#/components/responses/PostResponse"
+
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/ntp/time:
+    get:
+      tags:
+        - NTP
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+    post:
+      tags:
+        - NTP
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/network/status:
+    get:
+      tags:
+        - Network
+      summary: Retrieve network runtime information
+      security:
+        - ReadOnlyAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/network/config:
+    get:
+      tags:
+        - Network
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+    post:
+      tags:
+        - Network
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/device/config:
+    get:
+      tags:
+        - Hardware
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+    post:
+      tags:
+        - Hardware
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/security/config:
+    get:
+      tags:
+        - Security
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+    post:
+      tags:
+        - Security
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/security/authenticate:
+    get:
+      tags:
+        - Security
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/inverter/list:
+    get:
+      tags:
+        - Inverter
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/inverter/add:
+    post:
+      tags:
+        - Inverter
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/inverter/edit:
+    post:
+      tags:
+        - Inverter
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/inverter/del:
+    post:
+      tags:
+        - Inverter
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/inverter/order:
+    post:
+      tags:
+        - Inverter
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/livedata/status:
+    get:
+      tags:
+        - Inverter
+      summary: Retrieve inverter runtime information
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+        - allOf:
+          - $ref: "#/components/parameters/InverterSerial"
+          - required: false
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/inverter/stats_reset:
+    get:
+      tags:
+        - Inverter
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+        - $ref: "#/components/parameters/InverterSerial"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/devinfo/status:
+    get:
+      tags:
+        - Inverter
+      summary: Retrieve static information for specified inverter
+      security:
+        - ReadOnlyAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+        - $ref: "#/components/parameters/InverterSerial"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  valid_data:
+                    type: boolean
+                    description: >-
+                      Shows whether the device information data where already
+                      loaded from the inverter.
+                    example: true
+                  fw_bootloader_version:
+                    type: number
+                    example: 100
+                  fw_build_version:
+                    type: number
+                    example: 10012
+                  hw_part_number:
+                    type: number
+                    example: 269627414
+                  hw_version:
+                    type: string
+                    example: "01.00"
+                  hw_model_name:
+                    type: string
+                    example: HM-1500-4T"
+                  max_power:
+                    type: number
+                    example: 1500
+                  fw_build_datetime:
+                    type: string
+                    example: "2020-06-24 19:00:00"
+                  pdl_supported:
+                    type: boolean
+                    example: false
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/eventlog/status:
+    get:
+      tags:
+        - Inverter
+      summary: Retrieve eventlog for specified inverter
+      security:
+        - ReadOnlyAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+        - $ref: "#/components/parameters/InverterSerial"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count:
+                    type: number
+                    example: 1
+                  events:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        message_id:
+                          type: number
+                          example: 1
+                        message:
+                          type: string
+                          example: Inverter start
+                        start_time:
+                          type: number
+                          example: 29389
+                        end_time:
+                          type: number
+                          example: 29389
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/gridprofile/status:
+    get:
+      tags:
+        - Inverter
+      summary: Retrieve parseable grid profile for specified inverter
+      security:
+        - ReadOnlyAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+        - $ref: "#/components/parameters/InverterSerial"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/gridprofile/rawdata:
+    get:
+      tags:
+        - Inverter
+      summary: Retrieve raw data of grid profile for specified inverter
+      security:
+        - ReadOnlyAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+        - $ref: "#/components/parameters/InverterSerial"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/limit/status:
+    get:
+      tags:
+        - Inverter
+      security:
+        - ReadOnlyAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/limit/config:
+    post:
+      tags:
+        - Inverter
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/power/status:
+    get:
+      tags:
+        - Inverter
+      security:
+        - ReadOnlyAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/power/config:
+    post:
+      tags:
+        - Inverter
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/file/get:
+    get:
+      tags:
+        - File
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/file/delete:
+    post:
+      tags:
+        - File
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/file/delete_all:
+    post:
+      tags:
+        - File
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/file/list:
+    get:
+      tags:
+        - File
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/file/upload:
+    post:
+      tags:
+        - File
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/firmware/update:
+    post:
+      tags:
+        - Firmware upgrade
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/i18n/languages:
+    get:
+      tags:
+        - i18n
+      summary: Retrieve a list of all available language packs
+      description: >-
+        Returns a array of all available languages.
+        It contains the integrated languages as well as the custom
+        uploaded language packs.
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    code:
+                      type: string
+                      description: Code of language (as specified in the .json file)
+                      example: en
+                    name:
+                      type: string
+                      description: Name of language (as specified in the .json file)
+                      example: English
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/i18n/language:
+    get:
+      tags:
+        - i18n
+      summary: Retrieve json data of specified language pack
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+        - in: query
+          name: code
+          schema:
+            type: string
+          required: true
+          description: Country code of the language pack to get.
+          example: de
+      responses:
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+components:
+  securitySchemes:
+    ReadOnlyAccess:
+      description: This credentials are only checked if the function "Allow anonymous access" is disabled.
+      type: http
+      scheme: basic
+    ReadWriteAccess:
+      description: This credentials are always checked.
+      type: http
+      scheme: basic
+
+  parameters:
+    XRequestWith:
+      name: X-Requested-With
+      in: header
+      description: If this header is set to any value, the response will not contain the `WWW-Authenticate` header. This prevents the browser intneral dialogue box prompting for username and password.
+      schema:
+        type: string
+    InverterSerial:
+      name: inv
+      in: query
+      description: Inverter Serial Number
+      schema:
+        type: string
+      required: true
+      example: 116112345678
+
+  responses:
+    UnauthorizedError:
+      description: Authentication information is missing or invalid
+      headers:
+        WWW-Authenticate:
+          schema:
+            type: string
+            example: Basic realm="Login Required"
+
+    InternalServerError:
+      description: Internal server error. Will be returned if there isn't enough memory to process the json response.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+                example: "500 Internal Server Error: <Function>, <Line>"
+              code:
+                type: number
+                example: 500
+              type:
+                type: string
+                example: danger
+
+    PostResponse:
+      description: Ok
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+                example: 'Settings saved!"'
+              code:
+                type: number
+                example: 1001
+              type:
+                type: string
+                example: success
+              param:
+                type: object
+                properties:
+                  max:
+                    type: number
+                  min:
+                    type: number
+
+  schemas:
+    NtpConfig:
+      title: NTP configuration
+      type: object
+      properties:
+        ntp_server:
+          type: string
+          description: Hostname or IP of the configured NTP server
+          example: opendtu.pool.ntp.org
+        ntp_timezone:
+          type: string
+          description: Posix timezone string
+          example: CET-1CEST,M3.5.0,M10.5.0/3
+        ntp_timezone_descr:
+          type: string
+          description: Description of the time zone
+          example: Europe/Berlin
+        longitude:
+          type: number
+          example: 10.4515
+        latitude:
+          type: number
+          example: 51.1657
+        sunsettype:
+          type: number
+          description: >
+            Sun set type:
+             * `0` - Official
+             * `1` - Civil
+             * `2` - Astonomical
+             * `3` - Nautical
+          example: 1
+          enum: [0, 1, 2, 3]
+      required:
+        - ntp_server
+        - ntp_timezone
+        - ntp_timezone_descr
+        - longitude
+        - latitude
+        - sunsettype

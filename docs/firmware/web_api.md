@@ -1,47 +1,14 @@
-# Web API
+---
+hide:
+  - toc
+---
 
-Information in JSON format can be obtained through the web API.
+# Web API
 
 !!!danger "Important Note"
     The WebAPI is mainly generated to fetch and post information between the WebUI and the ESP. You use it at your own  risk. It may change in future and break compatibility!
 
-## List of URLs
-
-may be incomplete
-
-| GET/POST | Auth required | URL |
-| -------- | --- | -- |
-| Get      | yes | /api/file/get |
-| Post     | yes | /api/file/delete |
-| Get      | yes | /api/file/list |
-| Post     | yes | /api/file/upload |
-| Get+Post | yes | /api/device/config |
-| Get      | no  | /api/devinfo/status |
-| Get+Post | yes | /api/dtu/config |
-| Get      | no  | /api/eventlog/status?inv=inverter-serialnumber |
-| Post     | yes | /api/firmware/update |
-| Get      | yes | /api/inverter/list |
-| Post     | yes | /api/inverter/add |
-| Post     | yes | /api/inverter/del |
-| Post     | yes | /api/inverter/edit |
-| Post     | yes | /api/limit/config |
-| Get      | no  | /api/limit/status |
-| Get      | no  | /api/livedata/status?inv=inverter-serialnumber |
-| Get      | no  | /api/livedata/status |
-| Post     | yes | /api/maintenance/reboot |
-| Get+Post | yes | /api/mqtt/config |
-| Get      | no  | /api/mqtt/status |
-| Get+Post | yes | /api/network/config |
-| Get      | no  | /api/network/status |
-| Get+Post | yes | /api/ntp/config |
-| Get      | no  | /api/ntp/status |
-| Get+Post | yes | /api/ntp/time |
-| Get      | no  | /api/power/status |
-| Post     | yes | /api/power/config |
-| Get      | no  | /api/prometheus/metrics |
-| Get+Post | yes | /api/security/config |
-| Get      | yes | /api/security/authenticate |
-| Get      | no  | /api/system/status |
+<swagger-ui src="../assets/swagger/main.yaml"/>
 
 ## Examples of Use
 

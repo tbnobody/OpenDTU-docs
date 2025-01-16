@@ -73,6 +73,7 @@ plugins:
       type: datetime
       timezone: Europe/Berlin
       enable_creation_date: true
+  - swagger-ui-tag:
 
 markdown_extensions:
   - admonition
