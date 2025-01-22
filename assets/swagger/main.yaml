@@ -60,6 +60,117 @@ paths:
       parameters:
         - $ref: "#/components/parameters/XRequestWith"
       responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  hostname:
+                    type: string
+                    example: OpenDTU
+                  sdkversion:
+                    type: string
+                    example: v4.4.7-dirty
+                  cpufreq:
+                    type: number
+                    example: 240
+                  cputemp:
+                    type: number
+                    example: 47.0
+                  heap_total:
+                    type: number
+                    example: 282824
+                  heap_used:
+                    type: number
+                    example: 131984
+                  heap_max_block:
+                    type: number
+                    example: 106484
+                  heap_min_free:
+                    type: number
+                    example: 117028
+                  psram_total:
+                    type: number
+                    example: 0
+                  psram_used:
+                    type: number
+                    example: 0
+                  sketch_total:
+                    type: number
+                    example: 1966080
+                  sketch_used:
+                    type: number
+                    example: 1752672
+                  littlefs_total:
+                    type: number
+                    example: 196608
+                  littlefs_used:
+                    type: number
+                    example: 24576
+                  chiprevision:
+                    type: number
+                    example: 1
+                  chipmodel:
+                    type: string
+                    example: ESP32-D0WDQ6
+                  chipcores:
+                    type: number
+                    example: 2
+                  flashsize:
+                    type: number
+                    example: 4194304
+                  resetreason_0:
+                    type: string
+                    example: Software reset CPU
+                  resetreason_1:
+                    type: string
+                    example: Software reset CPU
+                  cfgsavecount:
+                    type: number
+                    example: 512
+                  config_version:
+                    type: string
+                    example: 0.1.29
+                  git_hash:
+                    type: string
+                    example: v25.1.14
+                  pioenv:
+                    type: string
+                    example: generic_esp32
+                  uptime:
+                    type: number
+                    example: 673647
+                  nrf_configured:
+                    type: boolean
+                    example: true
+                  nrf_connected:
+                    type: boolean
+                    example: true
+                  nrf_pvariant:
+                    type: boolean
+                    example: true
+                  cmt_configured:
+                    type: boolean
+                    example: false
+                  cmt_connected:
+                    type: boolean
+                    example: false
+                  task_details:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                          example: IDLE0
+                        stack_watermark:
+                          type: number
+                          example: 428
+                        priority:
+                          type: number
+                          example: 0
         "401":
           $ref: "#/components/responses/UnauthorizedError"
 
@@ -403,6 +514,64 @@ paths:
       parameters:
         - $ref: "#/components/parameters/XRequestWith"
       responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  sta_status:
+                    type: boolean
+                    example: true
+                  sta_ssid:
+                    type: string
+                    example: iot.lan
+                  sta_bssid:
+                    type: string
+                    example: C6:74:AD:C4:C7:A5
+                  sta_rssi:
+                    type: number
+                    example: -57
+                  network_hostname:
+                    type: string
+                    example: OpenDTU
+                  network_ip:
+                    type: string
+                    example: "192.168.20.110"
+                  network_netmask:
+                    type: string
+                    example: "255.255.255.0"
+                  network_gateway:
+                    type: string
+                    example: "192.168.20.1"
+                  network_dns1:
+                    type: string
+                    example: "192.168.178.1"
+                  network_dns2:
+                    type: string
+                    example: "0.0.0.0"
+                  network_mac:
+                    type: string
+                    example: 30:AE:A4:0E:12:C0
+                  network_mode:
+                    type: string
+                    example: Station
+                  ap_status:
+                    type: boolean
+                    example: false
+                  ap_ssid:
+                    type: string
+                    example: OpenDTU-922304
+                  ap_ip:
+                    type: string
+                    example: "192.168.4.1"
+                  ap_mac:
+                    type: string
+                    example: 30:AE:A4:0E:12:C1
+                  ap_stationnum:
+                    type: number
+                    example: 1
         "401":
           $ref: "#/components/responses/UnauthorizedError"
 
@@ -974,7 +1143,7 @@ components:
     XRequestWith:
       name: X-Requested-With
       in: header
-      description: If this header is set to any value, the response will not contain the `WWW-Authenticate` header. This prevents the browser intneral dialogue box prompting for username and password.
+      description: If this header is set to any value, the response will not contain the `WWW-Authenticate` header. This prevents the browser internal dialogue box prompting for username and password.
       schema:
         type: string
     InverterSerial:
