@@ -514,6 +514,64 @@ paths:
       parameters:
         - $ref: "#/components/parameters/XRequestWith"
       responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  sta_status:
+                    type: boolean
+                    example: true
+                  sta_ssid:
+                    type: string
+                    example: iot.lan
+                  sta_bssid:
+                    type: string
+                    example: C6:74:AD:C4:C7:A5
+                  sta_rssi:
+                    type: number
+                    example: -57
+                  network_hostname:
+                    type: string
+                    example: OpenDTU
+                  network_ip:
+                    type: string
+                    example: "192.168.20.110"
+                  network_netmask:
+                    type: string
+                    example: "255.255.255.0"
+                  network_gateway:
+                    type: string
+                    example: "192.168.20.1"
+                  network_dns1:
+                    type: string
+                    example: "192.168.178.1"
+                  network_dns2:
+                    type: string
+                    example: "0.0.0.0"
+                  network_mac:
+                    type: string
+                    example: 30:AE:A4:0E:12:C0
+                  network_mode:
+                    type: string
+                    example: Station
+                  ap_status:
+                    type: boolean
+                    example: false
+                  ap_ssid:
+                    type: string
+                    example: OpenDTU-922304
+                  ap_ip:
+                    type: string
+                    example: "192.168.4.1"
+                  ap_mac:
+                    type: string
+                    example: 30:AE:A4:0E:12:C1
+                  ap_stationnum:
+                    type: number
+                    example: 1
         "401":
           $ref: "#/components/responses/UnauthorizedError"
 
