@@ -96,7 +96,7 @@ Sets runtime data (like current power, voltage, temperature, frequency but NO yi
 
 ##### Zero daily yield at midnight :material-toggle-switch:{title="Switch"}
 
-Sets runtime data (like current power, voltage, temperature, frequency but NO yield data) to zero at midnight.
+Sets production data (like daily yield data) to zero at midnight.
 
 ##### Clear Eventlog at midnight :material-toggle-switch:{title="Switch"}
 
