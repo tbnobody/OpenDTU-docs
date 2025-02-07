@@ -152,9 +152,9 @@ the respective parameters. If any parameter is not set, the default value `-1`
 | w5500.int     | number    | Use -1 for not assigned pins. |
 | w5500.rst     | number    | Use -1 for not assigned pins. |
 | display.type  | number    | Specify type of display. Possible values:<ul><li>0 = None (default)</li><li>1 = PCD8544</li><li>2 = SSD1306</li><li>3 = SH1106</li><li>4 = SSD1309</li><li>5 = ST7567S GM12864-59N</li></ul> |
-| display.data  | number    | Data Pin (e.g. SDA for i2c displays) required for all displays. Use 255 for not assigned pins. |
-| display.clk   | number    | Clock Pin (e.g. SCL for i2c displays) required for SSD1306 and SH1106. Use 255 for not assigned pins. |
-| display.cs    | number    | Chip Select Pin required for PCD8544. Use 255 for not assigned pins. |
-| display.reset | number    | Reset Pin required for PCD8544, optional for all other displays. Use 255 for not assigned pins. |
+| display.data  | number    | Data Pin (e.g. SDA for i2c displays) required for all displays. Use -1 for not assigned pins. |
+| display.clk   | number    | Clock Pin (e.g. SCL for i2c displays) required for SSD1306 and SH1106. Use -1 for not assigned pins. |
+| display.cs    | number    | Chip Select Pin required for PCD8544. Use -1 for not assigned pins. |
+| display.reset | number    | Reset Pin required for PCD8544, optional for all other displays. Use -1 for not assigned pins. |
 | led.led0      | number    | LED pin for network indication. <ul><li>Blinking = WLAN connected but NTP & MQTT (if enabled) disconnected.</li><li>On = WLAN, NTP, MQTT connected.</li><li>Off = Network not connected</li></ul> |
 | led.led1      | number    | LED pin for inverter indication. <ul><li>On = All inverters reachable & producing.</li><li>Blinking = All inverters reachable but not producing.</li><li>Off = At least one inverter is not reachable.</li></ul> Only inverters with polling enabled are considered. |
