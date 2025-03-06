@@ -22,13 +22,13 @@
 
     The yield total value comes directly out of the inverter. (Currently) there is no way to reset or change this value. Please consider it as the total kilometer counter in a car. On the other hand it's possible to add a yield offset to each inverter. This can be set up in the inverter properties (**Settings** --> **Inverters** --> **Click on the pen icon**)
 
-??? question "Why get the daily yield values sometimes reset to zero at the evening?"
+??? question "Why do the daily yield values sometimes reset to zero at the evening?"
 
-    The values are reset if the inverter restarts. At some (cloudy) evenings it can occur that the brightness fluctuates heavily during the dusk. This could lead to multiple restarts of the inverter and therefore zeros in the production values. You can enable the **Yield Day Correction** in the inverter settings.
+    The values are reset if the inverter restarts. At some (cloudy) evenings it can happen that the solar energy fluctuates heavily during dusk. This can lead to multiple restarts of the inverter and therefore zeros in the production values. You can enable the **Yield Day Correction** in the inverter settings to compensate this.
 
 ??? question "OpenDTU shows wrong/unrealistic or just missing values"
 
-    This is most likely the case because two DTUs are querying the same inverter. This is a not supported behavior and can lead to unexpected effects. Only one DTU is allowed to query a specific inverter.
+    This is most likely the case because two DTUs are querying the same inverter. This is an unsupported behavior and can lead to unexpected effects. Only one DTU is allowed to query a specific inverter.
 
     Please also see [tbnobody#831](https://github.com/tbnobody/OpenDTU/issues/831){target=_blank}, [tbnobody#727](https://github.com//tbnobody/OpenDTU/issues/727){target=_blank}.
 
