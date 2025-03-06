@@ -391,7 +391,7 @@ paths:
                     example: Europe/Berlin
                   ntp_status:
                     type: boolean
-                    description: Returns whether the internal clock is synced
+                    description: Returns whether the internal clock is synchronized
                   ntp_localtime:
                     type: string
                     description: The time of the currently configured time zone
