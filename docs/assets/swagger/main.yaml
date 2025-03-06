@@ -1190,7 +1190,7 @@ components:
             properties:
               message:
                 type: string
-                example: 'Settings saved!"'
+                example: 'Settings saved!'
               code:
                 type: number
                 example: 1001
