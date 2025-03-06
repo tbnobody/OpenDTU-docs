@@ -55,11 +55,11 @@ Please see [DNS Server 1](#dns-server-1)
 
 Enables or disables the mDNS publication of the IP address and version the OpenDTU. This is useful to address the DTU in the network with its DNS name if no DNS server (e.g. on the router) is available. The generated mDNS name is composed as follows: `<WiFi Hostname>.local`.
 
-### Wi-Fi Configuration (Admin AccessPoint)
+### Wi-Fi Configuration (Admin Access Point)
 
-#### AccessPoint Timeout :material-form-textbox:{title="Textbox"}
+#### Access Point Timeout :material-form-textbox:{title="Textbox"}
 
-After each device restart, if no valid Wi-Fi configuration is found or if the configured AccessPoint is not found, an internal AccessPoint is opened. In case that the Wi-Fi configuration is valid and the infrastructure AP[^3] is reachable, the internal AP is closed after the time configured in this setting.
+After each device restart, if no valid Wi-Fi configuration is found or if the configured Access Point is not found, an internal Access Point is opened. In case that the Wi-Fi configuration is valid and the infrastructure AP[^3] is reachable, the internal AP is closed after the time configured in this setting.
 
 [^1]: [SSID](https://en.wikipedia.org/wiki/Service_set_(802.11_network)#SSID){target=_blank}
 [^2]: [Local Area Network](https://en.wikipedia.org/wiki/Local_area_network){target=_blank}

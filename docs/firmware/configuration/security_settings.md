@@ -10,7 +10,7 @@
 
 #### Password :material-form-textbox-password:{title="Textbox"}
 
-This password is used both to log in to the web interface and to connect to the [Admin AccessPoint](network_settings.md#accesspoint-timeout).
+This password is used both to log in to the web interface and to connect to the [Admin Access Point](network_settings.md#access-point-timeout).
 
 #### Repeat Password :material-form-textbox-password:{title="Textbox"}
 
