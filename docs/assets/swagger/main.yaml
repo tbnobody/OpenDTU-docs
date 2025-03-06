@@ -301,7 +301,7 @@ paths:
                     type: string
                     example: ''
                   mqtt_lwt_topic:
-                    type: string,
+                    type: string
                     example: solar/status
                   mqtt_publish_interval:
                     type: number
