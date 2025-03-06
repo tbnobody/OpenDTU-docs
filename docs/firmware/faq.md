@@ -16,7 +16,7 @@
 
 ??? question "A set up inverter does not appear in the live view"
 
-    Double check whether the inverter type in **Settings** --> **Inverter** reflects your type or if it's unknown. If it's unknown it will not appear in the live view and you most likely inserted a invalid serial number.
+    Double check whether the inverter type in **Settings** --> **Inverter** reflects your type or if it's unknown. If it's unknown it will not appear in the live view and you most likely inserted an invalid serial number.
 
 ??? question "Is it possible to reset the yield total value?"
 
@@ -24,7 +24,7 @@
 
 ??? question "Why get the daily yield values sometimes reset to zero at the evening?"
 
-    The values are reset if the inverter restarts. At some (cloudy) evenings it can occur that the brightness fluctuates heavily during the dusk. This could lead to multiple restarts of the inverter and therefor zeros in the production values. You can enable the **Yield Day Correction** in the inverter settings.
+    The values are reset if the inverter restarts. At some (cloudy) evenings it can occur that the brightness fluctuates heavily during the dusk. This could lead to multiple restarts of the inverter and therefore zeros in the production values. You can enable the **Yield Day Correction** in the inverter settings.
 
 ??? question "OpenDTU shows wrong/unrealistic or just missing values"
 
@@ -34,7 +34,7 @@
 
 ??? question "With HMS-1800 or HMS-2000 the reactive power shows unrealistic value 6.553,5"
 
-    This seems to be a issue with inverter Firmware 1.0.14. It contains a calculation mistake.
+    This seems to be an issue with inverter Firmware 1.0.14. It contains a calculation mistake.
 
     Reactive power seems to scale incorrectly / be calculated incorrectly and runs up with increasing power at sunrise from 0 to 0xFFFF and remains there, which can be observed at slow sunrise and sunset again (only in the very low watt range). Since the PF is calculated from P and Q and Q is insanely high, this results in a PF of almost 0.
 
@@ -42,7 +42,7 @@
 
 ??? question "After the OpenDTU startup the limit is stated as zero but the inverter seems to work properly"
 
-    The limit is fetched every 2-4 minutes from the inverter. If it is fetch more often the inverter will create error messages in the event log.
+    The limit is fetched every 2-4 minutes from the inverter. If it is fetched more often the inverter will create error messages in the event log.
     Due to the fact that on OpenDTU startup it is unknown when the limit was last queried, a 4-minute delay is applied before the limit will be fetched.
 
 ## Debugging
@@ -69,4 +69,4 @@
 
 ??? question "OpenDTU does not build: C:/Users/<username\>/.platformio/packages/framework-arduinoespressif32/cores/esp32/Arduino.h:33:10: fatal error: freertos/FreeRTOS.h: No such file or directory #include \"freertos/FreeRTOS.h\""
 
-    This is most likly a issue with your PlatformIO installation. As a workaround you can delete all packages within the `C:/Users/<username\>/.platformio/packages/` folder. The content will be downloaded on the next compile attempt.
+    This is most likly an issue with your PlatformIO installation. As a workaround you can delete all packages within the `C:/Users/<username\>/.platformio/packages/` folder. The content will be downloaded on the next compile attempt.

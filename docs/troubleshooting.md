@@ -6,7 +6,7 @@
 * The NRF24L01+ needs relatively much current. With bad power supply (and especially bad cables!) a 10 µF capacitor soldered directly to the NRF24L01+ board connector brings more stability (pin 1+2 are the power supply). Note the polarity of the capacitor.
 * You can try to use a USB power supply with 1 A or more instead of connecting the ESP32 to the computer.
 * Try a different USB cable. Once again, a stable power source is important. Some USB cables are made of much plastic and very little copper inside.
-* Double check that you have a radio module NRF24L01+ with a plus sign at the end. NRF24L01 module without the plus are not compatible with this project.
+* Double check that you have a radio module NRF24L01+ with a plus sign at the end. NRF24L01 modules without the plus are not compatible with this project.
 * There is no possibility of auto-discovering the inverters. Double check you have entered the serial numbers of the inverters correctly.
 * OpenDTU needs access to a working NTP server to get the current date & time.
 * If your problem persists, check the  [Issues on GitHub](https://github.com/tbnobody/OpenDTU/issues){target=_blank}. Please inspect not only the open issues, also the closed issues contain useful information.

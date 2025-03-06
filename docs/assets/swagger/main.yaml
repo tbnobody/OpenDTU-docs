@@ -1078,7 +1078,7 @@ paths:
         - i18n
       summary: Retrieve a list of all available language packs
       description: >-
-        Returns a array of all available languages.
+        Returns an array of all available languages.
         It contains the integrated languages as well as the custom
         uploaded language packs.
       parameters:

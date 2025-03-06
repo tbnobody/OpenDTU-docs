@@ -64,6 +64,6 @@ Press this button to manually synchronize the ESP time with your local time. Thi
     Keep in mind, that the time gets lost after a power cycle. Also note, that the time accuracy will be skewed badly, as it can not be resynchronised regularly using a NTP server and the ESP32 microcontroller does not have a RTC[^4].
 
 [^1]: [Network Time Protocol](https://en.wikipedia.org/wiki/Network_Time_Protocol){target=_blank}
-[^2]: [Coordinated Universal Timeordic](https://en.wikipedia.org/wiki/Coordinated_Universal_Time){target=_blank}
+[^2]: [Coordinated Universal Time](https://en.wikipedia.org/wiki/Coordinated_Universal_Time){target=_blank}
 [^3]: [Daylight saving time](https://en.wikipedia.org/wiki/Daylight_saving_time){target=_blank}
 [^4]: [Real-time clock](https://en.wikipedia.org/wiki/Real-time_clock){target=_blank}

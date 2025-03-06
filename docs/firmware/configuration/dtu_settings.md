@@ -51,6 +51,6 @@ The DTU must change this frequency before further communication. This is the val
 
 !!! warning "Warning"
 
-    Please check your local regulations if you are allowed to send on the choosen frequency with the specified transmit power!
+    Please check your local regulations if you are allowed to send on the chosen frequency with the specified transmit power!
 
 [^1]: [Radio frequency](https://en.wikipedia.org/wiki/Radio_frequency){target=_blank}
