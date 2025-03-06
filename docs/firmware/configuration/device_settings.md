@@ -22,7 +22,7 @@ The table shows all available pin configurations and how they are assigned curre
 
 ### Display
 
-This settings apply to a properbly connected display. See [Device Profiles](../device_profiles.md) for display types and pin assignment.
+These settings apply to a properly connected display. See [Device Profiles](../device_profiles.md) for display types and pin assignment.
 
 #### Switch off if no solar :material-toggle-switch:{title="Switch"}
 
@@ -54,7 +54,7 @@ The contrast setting is only supported by some displays and the impact is also d
 
 ### LEDs
 
-This settings apply to properbly connected LEDs[^1]. See [Device Profiles](../device_profiles.md) for LED function and pin assignment.
+These settings apply to properly connected LEDs[^1]. See [Device Profiles](../device_profiles.md) for LED function and pin assignment.
 
 #### Equal brightness :material-toggle-switch:{title="Switch"}
 

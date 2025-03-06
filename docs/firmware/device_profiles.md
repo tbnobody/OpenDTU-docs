@@ -13,7 +13,7 @@ Perform these steps to configure pin assignments for your board:
 
 ## Details
 
-It is required to setup hardware settings like pin assignments or Ethernet
+It is required to set up hardware settings like pin assignments or Ethernet
 support using a JSON file. This tells OpenDTU what peripherals are
 connected and how they are connected. The JSON file is uploaded using the
 configuration management (**Settings** --> **Config Management**) in the web

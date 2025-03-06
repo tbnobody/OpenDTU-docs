@@ -12,4 +12,4 @@
 
 #### Reboot :material-button-cursor:{title="Button"}
 
-Press this button to restart the ESP. A additional confirmation is required before the action is performed.
+Press this button to restart the ESP. An additional confirmation is required before the action is performed.

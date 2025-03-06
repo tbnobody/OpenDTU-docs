@@ -21,11 +21,11 @@ Enables or disables the [Home Assistant MQTT Auto Discovery](https://www.home-as
 
 ### MQTT Broker Parameter
 
-This settings are only visible if [MQTT](#enable-mqtt) is enabled.
+These settings are only visible if [MQTT](#enable-mqtt) is enabled.
 
 #### Hostname :material-form-textbox:{title="Textbox"}
 
-Host name or IP address of your MQTT broker. Make sure your DNS servers are set-up properly if you specify a host name.
+Host name or IP address of your MQTT broker. Make sure your DNS servers are set up properly if you specify a host name.
 
 #### Port :material-form-textbox:{title="Textbox"}
 
@@ -53,11 +53,11 @@ Enables the CleanSession[^3] flag for MQTT communication.
 
 #### Enable Retain flag :material-toggle-switch:{title="Switch"}
 
-Publish all information with retain[^2] flag. This has the advantage that each value is immediatly avilable if you connect to your broker and subscribe to the specific topics you will get immediatly the latest values.
+Publish all information with retain[^2] flag. This has the advantage that each value is immediately available if you connect to your broker and subscribe to the specific topics you will get immediately the latest values.
 
 #### Enable TLS :material-toggle-switch:{title="Switch"}
 
-Enables a secure TLS connection to your MQTT broker. If using this you have to get a proper certificate (self signed will not work, is has to be signed by a CA) and the hostname entered as MQTT Hostname must match the CN in the certificate. You must also specify the CA-Root-Certificate.
+Enables a secure TLS connection to your MQTT broker. If using this you have to get a proper certificate (self signed will not work, it has to be signed by a CA) and the hostname entered as MQTT Hostname must match the CN in the certificate. You must also specify the CA-Root-Certificate.
 
 #### CA-Root-Certificate :material-form-textbox:{title="Textbox"}
 
@@ -65,7 +65,7 @@ The root certificate of your CA if you are using a TLS connection to your broker
 
 #### Enable TLS Certificate Login :material-toggle-switch:{title="Switch"}
 
-Uses certificates to authenticate agains a MQTT broker. When enabled, the **TLS Client-Certificate** and the **TLS Client-Key** has to be supplied.
+Uses certificates to authenticate against a MQTT broker. When enabled, the **TLS Client-Certificate** and the **TLS Client-Key** has to be supplied.
 
 #### TLS Client-Certificate :material-form-textbox:{title="Textbox"}
 
@@ -77,7 +77,7 @@ Should include the `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`
 
 ### LWT Parameters
 
-This settings are only visible if [MQTT](#enable-mqtt) is enabled.
+These settings are only visible if [MQTT](#enable-mqtt) is enabled.
 
 #### LWT Topic :material-form-textbox:{title="Textbox"}
 
@@ -97,7 +97,7 @@ Sets the QoS of the LWT topic.
 
 ### Home Assistant MQTT Auto Discovery Parameters
 
-This settings are only visible if [Enable Home Assistant MQTT Auto Discovery](#enable-home-assistant-mqtt-auto-discovery) is enabled.
+These settings are only visible if [Enable Home Assistant MQTT Auto Discovery](#enable-home-assistant-mqtt-auto-discovery) is enabled.
 
 Home Assistant provides the [MQTT integration](https://www.home-assistant.io/integrations/mqtt/){target=_blank} and through this integration it is possible to exploit and manage the messages published by OpenDTU.
 Once this integration on home assistant is configured with the same MQTT broker, it is possible to create devices manually or through the autodiscovery function.
@@ -108,7 +108,7 @@ The base under which all Home Assistant MQTT Auto Discovery magic happens. If yo
 
 #### Enable Retain Flag :material-toggle-switch:{title="Switch"}
 
-Publish all auto discovery information with retain[^2] flag. This has the advantage that Home Assistant automaticaly finds all devices on restart.
+Publish all auto discovery information with retain[^2] flag. This has the advantage that Home Assistant automatically finds all devices on restart.
 
 #### Enable Expiration :material-toggle-switch:{title="Switch"}
 

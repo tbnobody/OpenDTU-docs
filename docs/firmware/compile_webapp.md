@@ -2,7 +2,7 @@
 
 ## General information
 
-The WebApp works completly independent from the C/C++ firmware. When compiling
+The WebApp works completely independent of the C/C++ firmware. When compiling
 the firmware, the pre-compiled WebApp will be embedded into the firmware `.bin`
 file. The communication between the frontend and the ESP is just done using the
 Web API.
@@ -14,14 +14,14 @@ allows a easy development. It will forward all the requests to the backend
 automatically to your ESP. That means you can develop the webinterface without
 flashing the ESP (if the WebAPI stays the same).
 
-## Install prerequisits
+## Install prerequisites
 
 You need to install [NodeJS LTS](https://nodejs.org/en/download/){target=_blank} to be able to work with the WebApp.
 
 ## Building the WebApp
 
 The WebApp will be build using `yarn`. First of all you have to install all the
-dependencies. Afterwards the app will be build. Start a Terminal of your choice
+dependencies. Afterwards the app will be built. Start a Terminal of your choice
 and enter the following commands:
 
 ```bash

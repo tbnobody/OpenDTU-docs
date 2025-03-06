@@ -1,6 +1,9 @@
 # Displays
 
-OpenDTU currently supports different types of displays (see below). Currently only displays with a resolution of 128x64 pixel are supported. To activate a display you have to specify it's type and pin assignment either in a device profile. Please see [here](../firmware/device_profiles.md#implemented-configuration-values) for value `display.type` to determine the possible values. (On this page is also a link to several example configurations for different ESP boards)
+OpenDTU currently supports different types of displays (see below).
+Currently only displays with a resolution of 128x64 pixel are supported. To
+activate a display you have to specify its type and pin assignment in a
+[device profile](../firmware/device_profiles.md).
 
 ## Display Settings
 

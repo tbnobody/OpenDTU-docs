@@ -55,7 +55,7 @@
 
     This means that under certain circumstances (activation of WLAN/Ethernet or sending requests to the inverter) the supply voltage drops to such an extent that the ESP can no longer work reliably. This can be remedied, for example, with a 100uF capacitor between VCC and GND. In exceptional cases, the power supply unit also appears to be too weak. The cable cross-section of the USB cable can also have an influence.
 
-??? question "After a reboot of the router or access point, OpenDTU does not reconnect immediatly to the Wi-Fi"
+??? question "After a reboot of the router or access point, OpenDTU does not reconnect immediately to the Wi-Fi"
 
     OpenDTU tries to reconnect to the Wi-Fi for 30 seconds. If it can't find the Wi-Fi within this time it stops reconnecting and waits for 10 minutes until a new connect attempt is done. This is done because all channels are tried during a connection attempt. This means that an end device that is connected to the "Admin Access Point" may lose the connection or is not be able to connect at all.
 
@@ -67,6 +67,6 @@
 
     Please also see [tbnobody#719](https://github.com/tbnobody/OpenDTU/issues/719){target=_blank}.
 
-??? question "OpenDTU does not build: "C:/Users/<username\>/.platformio/packages/framework-arduinoespressif32/cores/esp32/Arduino.h:33:10: fatal error: freertos/FreeRTOS.h: No such file or directory #include \"freertos/FreeRTOS.h\""
+??? question "OpenDTU does not build: C:/Users/<username\>/.platformio/packages/framework-arduinoespressif32/cores/esp32/Arduino.h:33:10: fatal error: freertos/FreeRTOS.h: No such file or directory #include \"freertos/FreeRTOS.h\""
 
     This is most likly a issue with your PlatformIO installation. As a workaround you can delete all packages within the `C:/Users/<username\>/.platformio/packages/` folder. The content will be downloaded on the next compile attempt.

@@ -12,7 +12,7 @@ OpenDTU needs a proper synced clock to start fetching the inverter. (Every reque
 
 #### Time Server :material-form-textbox:{title="Textbox"}
 
-Hostname or IP address of your NTP[^1] server. The default value is ok unless your WiFi does not provide access to the internet. In this case you have to enter your own NTP server (mostly the IP of your router e.g. `192.168.178.1`).
+Hostname or IP address of your NTP[^1] server. The default value is ok unless your Wi-Fi does not provide access to the internet. In this case you have to enter your own NTP server (mostly the IP of your router e.g. `192.168.178.1`).
 
 #### Timezone :material-form-dropdown:{title="Dropdown"}
 
@@ -36,7 +36,7 @@ Longitude of the location of your inverter in degree.
 
 #### Sunset type :material-form-dropdown:{title="Dropdown"}
 
-There are differnt "Sunset types" which add different offsets to the calculated time.
+There are different "Sunset types" which add different offsets to the calculated time.
 The following values are possible:
 
 * Standard dawn (90.8°)
@@ -58,10 +58,10 @@ Shows the current time detected from your web browser.
 
 #### Synchronize Time :material-button-cursor:{title="Button"}
 
-Press this button to manually synchronize the ESP time with your local time. This can be usefull if no NTP server is available.
+Press this button to manually synchronize the ESP time with your local time. This can be useful if no NTP server is available.
 
 !!! note "Note"
-    Keep in mind, that the time gets lost after a power cycle. Also note, that the time accuracy will be skewed badly, as it can not resynchronised regularly using a NTP server and the ESP32 microcontroller does not have a RTC[^4].
+    Keep in mind, that the time gets lost after a power cycle. Also note, that the time accuracy will be skewed badly, as it can not be resynchronised regularly using a NTP server and the ESP32 microcontroller does not have a RTC[^4].
 
 [^1]: [Network Time Protocol](https://en.wikipedia.org/wiki/Network_Time_Protocol){target=_blank}
 [^2]: [Coordinated Universal Timeordic](https://en.wikipedia.org/wiki/Coordinated_Universal_Time){target=_blank}

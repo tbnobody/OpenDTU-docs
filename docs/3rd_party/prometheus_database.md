@@ -1,6 +1,6 @@
 # Using the prometheus database for data collection
 
-The prometheus database is used for many projects for data collection. It is relatively easy to setup and use.
+The prometheus database is used for many projects for data collection. It is relatively easy to set up and use.
 
 For installation, you can follow a [guide provided by the prometheus devs](https://prometheus.io/docs/introduction/first_steps/).
 
