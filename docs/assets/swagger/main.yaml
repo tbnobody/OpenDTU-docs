@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   title: OpenDTU
   description: >-
-    The WebAPI is used to control OpenDTU using the integrated WebApp.
+    The Web API is used to control OpenDTU using the integrated WebApp.
 
   license:
     name: GNU General Public License, Version 2

@@ -6,7 +6,7 @@ hide:
 # Web API
 
 !!!danger "Important Note"
-    The WebAPI is mainly generated to fetch and post information between the WebUI and the ESP. You use it at your own  risk. It may change in future and break compatibility!
+    The Web API is mainly generated to fetch and post information between the WebUI and the ESP. You use it at your own  risk. It may change in future and break compatibility!
 
 <swagger-ui src="../assets/swagger/main.yaml"/>
 

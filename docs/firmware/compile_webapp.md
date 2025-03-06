@@ -12,7 +12,7 @@ If you've changed the WebApp, you have to (re-)compile the WebApp before buildin
 There is also a dev server which hosts the frontend at your local computer and
 allows a easy development. It will forward all the requests to the backend
 automatically to your ESP. That means you can develop the webinterface without
-flashing the ESP (if the WebAPI stays the same).
+flashing the ESP (if the Web API stays the same).
 
 ## Install prerequisites
 
