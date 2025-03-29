@@ -32,11 +32,11 @@ NTP servers provide the time in UTC[^1] time format. It is necessary to convert 
 
 #### Sunrise
 
-Time of todays sunrise. Used to set the day/night mode.
+Time of today's sunrise. Used to set the day/night mode.
 
 #### Sunset
 
-Time of todays sunset. Used to set the day/night mode.
+Time of today's sunset. Used to set the day/night mode.
 
 #### Mode
 

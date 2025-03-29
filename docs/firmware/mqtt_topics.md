@@ -1,6 +1,6 @@
 # MQTT Topics
 
-The base topic, as configured in the web GUI is prepended to all follwing topics.
+The base topic, as configured in the web GUI is prepended to all following topics.
 
 ## General topics
 
@@ -26,10 +26,10 @@ Enabled inverter means, that only inverters with "Poll inverter data" enabled ar
 | `ac/power`                                | R     | Sum of AC active power of all enabled inverters      | W                          |
 | `ac/yieldtotal`                           | R     | Sum of energy converted to AC since reset watt hours of all enabled inverters | Kilo watt hours (kWh) |
 | `ac/yieldday`                             | R     | Sum of energy converted to AC per day in watt hours of all enabled inverters | Watt hours (Wh)
-| `ac/is_valid`                             | R     | Indicator whether all enabled inverters where reachable | 0 or 1                  |
+| `ac/is_valid`                             | R     | Indicator whether all enabled inverters were reachable | 0 or 1                   |
 | `dc/power`                                | R     | Sum of DC power of all enabled inverters             | Watt (W)                   |
 | `dc/irradiation`                          | R     | Produced power of all enabled inverter stripes with defined irradiation settings divided by sum of all enabled inverters irradiation | % |
-| `dc/is_valid`                             | R     | Indicator whether all enabled inverters where reachable | 0 or 1                  |
+| `dc/is_valid`                             | R     | Indicator whether all enabled inverters were reachable | 0 or 1                   |
 
 ## Inverter specific topics
 
@@ -45,14 +45,14 @@ serial will be replaced with the serial number of the inverter.
 | `[serial]/device/hwversion`               | R     | Hardware version of the inverter                     |                            |
 | `[serial]/radio/tx_request`               | R     | Amount of sent packet requests                       |                            |
 | `[serial]/radio/tx_re_request`            | R     | Amount of sent fragment resend requests              |                            |
-| `[serial]/radio/rx_success`               | R     | Amount of successfull received packets               |                            |
+| `[serial]/radio/rx_success`               | R     | Amount of successfully received packets              |                            |
 | `[serial]/radio/rx_fail_nothing`          | R     | Amount of failed packets, nothing was received       |                            |
-| `[serial]/radio/rx_fail_partial`          | R     | Amount of failed packets, some fragments where missing |                            |
+| `[serial]/radio/rx_fail_partial`          | R     | Amount of failed packets, some fragments were missing |                            |
 | `[serial]/radio/rx_fail_corrupt`          | R     | Amount of failed packets, payload corrupt            |                            |
 | `[serial]/radio/rssi`                     | R     | RSSI of last received packet (Inverters with NRF24 module only support 2 states. > -64dBm and < -64dBm. In the first case -30 dBm is shown, in the second one -80 dBm) | dBm                        |
 | `[serial]/status/reachable`               | R     | Indicates whether the inverter is reachable          | 0 or 1                     |
 | `[serial]/status/producing`               | R     | Indicates whether the inverter is producing AC power | 0 or 1                     |
-| `[serial]/status/last_update`             | R     | Unix timestamp of last inverter statistics udpate    | seconds since JAN 01 1970 (UTC) |
+| `[serial]/status/last_update`             | R     | Unix timestamp of last inverter statistics update    | seconds since JAN 01 1970 (UTC) |
 
 ### AC channel / global specific topics
 
@@ -92,10 +92,10 @@ cmd topics are used to set values. Status topics are updated from values set in 
 | ------------------------------------------- | ----- | ---------------------------------------------------- | -------------------------- |
 | `[serial]/status/limit_relative`            | R     | Current applied production limit of the inverter     | % of total possible output |
 | `[serial]/status/limit_absolute`            | R     | Current applied production limit of the inverter     | Watt (W)                   |
-| `[serial]/cmd/limit_persistent_relative`    | W     | Set the inverter limit as a percentage of total production capability. The  value will survive the night without power. The updated value will show up in the web GUI and limit_relative topic immediatly. | %                          |
-| `[serial]/cmd/limit_persistent_absolute`    | W     | Set the inverter limit as a absolute value. The  value will survive the night without power. The updated value will set immediatly within the inverter but show up in the web GUI and limit_relative topic after around 4 minutes. If you are using a already known inverter (known Hardware ID), the updated value will show up within a few seconds. | Watt (W)                   |
-| `[serial]/cmd/limit_nonpersistent_relative` | W     | Set the inverter limit as a percentage of total production capability. The  value will reset to the last persistent value at night without power. The updated value will show up in the web GUI and limit_relative topic immediatly. The value must be published non-retained, otherwise it will be ignored! | %                          |
-| `[serial]/cmd/limit_nonpersistent_absolute` | W     | Set the inverter limit as a absolute value. The  value will reset to the last persistent value at night without power. The updated value will set immediatly within the inverter but show up in the web GUI and limit_relative topic after around 4 minutes. If you are using a already known inverter (known Hardware ID), the updated value will show up within a few seconds. The value must be published non-retained, otherwise it will be ignored! | Watt (W)                   |
+| `[serial]/cmd/limit_persistent_relative`    | W     | Set the inverter limit as a percentage of total production capability. The  value will survive the night without power. The updated value will show up in the web GUI and limit_relative topic immediately. | %                          |
+| `[serial]/cmd/limit_persistent_absolute`    | W     | Set the inverter limit as an absolute value. The value will survive the night without power. The updated value will set immediately within the inverter but show up in the web GUI and limit_absolute topic after around 4 minutes. If you are using an already known inverter (known Hardware ID), the updated value will show up within a few seconds. | Watt (W)                   |
+| `[serial]/cmd/limit_nonpersistent_relative` | W     | Set the inverter limit as a percentage of total production capability. The  value will reset to the last persistent value at night without power. The updated value will show up in the web GUI and limit_relative topic immediately. The value must be published non-retained, otherwise it will be ignored! | %                          |
+| `[serial]/cmd/limit_nonpersistent_absolute` | W     | Set the inverter limit as an absolute value. The value will reset to the last persistent value at night without power. The updated value will set immediately within the inverter but show up in the web GUI and limit_absolute topic after around 4 minutes. If you are using a already known inverter (known Hardware ID), the updated value will show up within a few seconds. The value must be published non-retained, otherwise it will be ignored! | Watt (W)                   |
 | `[serial]/cmd/power`                        | W      | Turn the inverter on (1) or off (0)                 | 0 or 1                     |
 | `[serial]/cmd/reset_rf_stats`               | W      | Reset the radio statistics                          | 1                          |
 | `[serial]/cmd/restart`                      | W      | Restarts the inverters (also resets YieldDay)       | 1                          |

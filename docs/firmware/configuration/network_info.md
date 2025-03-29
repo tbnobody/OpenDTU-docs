@@ -6,7 +6,7 @@
 
 ## Settings / Parameters
 
-### WiFi Information (Station)
+### Wi-Fi Information (Station)
 
 #### Status
 
@@ -18,9 +18,9 @@
 
 #### RSSI
 
-### Wifi Information (Access Point)
+### Wi-Fi Information (Access Point)
 
-This section contain information about the internal access point which will be opened at device startup or if no connection to the configured WiFi or ethernet can be established.
+This section contain information about the internal access point which will be opened at device startup or if no connection to the configured Wi-Fi or ethernet can be established.
 
 #### Status
 

@@ -2,7 +2,7 @@
 
 ## Multiple USB-Ports
 
-You board may be equipped with multiple USB ports. This is mostly the case for
+Your board may be equipped with multiple USB ports. This is mostly the case for
 ESP32-S3 boards. One of the port connects to a USB-UART bridge on the board,
 while the other connects to the ESP32 natively using USB. The former port may
 be labeled "UART" or "COM" and the latter port may be labeled "USB". On some
@@ -55,7 +55,7 @@ tab below that matches your flash tool.
 === "ESP Flash Tools :material-microsoft-windows:"
     Espressif provides their own [Flash Download Tools](https://www.espressif.com/en/support/download/other-tools){target=_blank} for Windows.
 
-    ![Flash Downloda Tool](../assets/images/esp_flash_tools.png)
+    ![Flash Download Tool](../assets/images/esp_flash_tools.png)
 
     Change `COM9` to the correct port on your computer.
 

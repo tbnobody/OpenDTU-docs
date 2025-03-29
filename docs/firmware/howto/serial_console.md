@@ -3,7 +3,7 @@
 The serial console which is shown in the WebUI does not show the whole boot
 process and also not several very critical errors, because in such moments the
 TCP connection is also interrupted. There are several ways to look at the
-serial console. First of all, the ESP32 has to be connected via an USB cable to
+serial console. First of all, the ESP32 has to be connected via a USB cable to
 the computer.
 
 ## Windows

@@ -10,7 +10,7 @@
 
 ## Description
 
-The NRF24L01+ module is a 2,4GHz RF module. **It is absolutly important to get the newer PLUS variant!** (Only the PLUS variant supports the required transmission speeds and is able to communicate with the inverter)
+The NRF24L01+ module is a 2,4GHz RF module. **It is absolutley important to get the newer PLUS variant!** (Only the PLUS variant supports the required transmission speeds and is able to communicate with the inverter)
 There are several variants with different qualities and prices. Most of them are pin compatible. A noteable brand name is e.g. [EBYTE ML01DP5](https://www.ebyte.com/en/pdf-down.aspx?id=1136){target=_blank}. It includes a proper shielding and integrated capacitors.
 
 Buy your hardware from a trusted source, at best from a dealer/online shop in your country where you have support and the right to return non-functional hardware.

@@ -6,7 +6,7 @@ hide:
 # Web API
 
 !!!danger "Important Note"
-    The WebAPI is mainly generated to fetch and post information between the WebUI and the ESP. You use it at your own  risk. It may change in future and break compatibility!
+    The Web API is mainly generated to fetch and post information between the WebUI and the ESP. You use it at your own  risk. It may change in future and break compatibility!
 
 <swagger-ui src="../assets/swagger/main.yaml"/>
 
@@ -14,7 +14,7 @@ hide:
 
 ### Important notes
 
-- IP addresses and serial numbers in this examples are anonymized. Adjust to your own needs.
+- IP addresses and serial numbers in these examples are anonymized. Adjust to your own needs.
 - The output from curl is without a linefeed at the end, so please be careful when copying the output - do not accidentally add the shell prompt directly after it.
 - When POSTing config data to OpenDTU, always send all settings back, even if only one setting was changed. Sending single settings is not supported and you will receive a response `{"type":"warning","message":"Values are missing!"}`
 - When POSTing, always put single quotes around the data part. Do not confuse the single quote `'` with the backtick `` ` ``. You have been warned.
