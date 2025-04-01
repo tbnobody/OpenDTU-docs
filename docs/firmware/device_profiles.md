@@ -56,13 +56,7 @@ the respective parameters. If any parameter is not set, the default value `-1`
             "clk": 22
         },
         "eth": {
-            "enabled": false,
-            "phy_addr": -1,
-            "power": -1,
-            "mdc": -1,
-            "mdio": -1,
-            "type": -1,
-            "clk_mode": -1
+            "enabled": false
         }
     },
     {
@@ -76,13 +70,7 @@ the respective parameters. If any parameter is not set, the default value `-1`
             "cs": 5
         },
         "eth": {
-            "enabled": false,
-            "phy_addr": -1,
-            "power": -1,
-            "mdc": -1,
-            "mdio": -1,
-            "type": -1,
-            "clk_mode": -1
+            "enabled": false
         },
         "display": {
             "type": 2,
