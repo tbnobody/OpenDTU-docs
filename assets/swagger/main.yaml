@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   title: OpenDTU
   description: >-
-    The WebAPI is used to control OpenDTU using the integrated WebApp.
+    The Web API is used to control OpenDTU using the integrated WebApp.
 
   license:
     name: GNU General Public License, Version 2
@@ -301,7 +301,7 @@ paths:
                     type: string
                     example: ''
                   mqtt_lwt_topic:
-                    type: string,
+                    type: string
                     example: solar/status
                   mqtt_publish_interval:
                     type: number
@@ -391,7 +391,7 @@ paths:
                     example: Europe/Berlin
                   ntp_status:
                     type: boolean
-                    description: Returns whether the internal clock is synced
+                    description: Returns whether the internal clock is synchronized
                   ntp_localtime:
                     type: string
                     description: The time of the currently configured time zone
@@ -1078,7 +1078,7 @@ paths:
         - i18n
       summary: Retrieve a list of all available language packs
       description: >-
-        Returns a array of all available languages.
+        Returns an array of all available languages.
         It contains the integrated languages as well as the custom
         uploaded language packs.
       parameters:
@@ -1190,7 +1190,7 @@ components:
             properties:
               message:
                 type: string
-                example: 'Settings saved!"'
+                example: 'Settings saved!'
               code:
                 type: number
                 example: 1001
