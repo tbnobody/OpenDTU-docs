@@ -6,7 +6,7 @@ jobs:
   mkdocs:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - name: Configure Git Credentials
@@ -16,7 +16,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Install Python and dependencies
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v7
         with:
           python-version: '3.x'
           cache: 'pip'
@@ -24,7 +24,7 @@ jobs:
       - run: pip install -r requirements.txt
 
       - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
-      - uses: actions/cache@v3
+      - uses: actions/cache@v6
         with:
           key: mkdocs-material-${{ env.cache_id }}
           path: .cache
