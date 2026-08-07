@@ -34,6 +34,7 @@
 | Hoymiles HMS-1600-4T | CMT2300A           | 4         | 4           | 1         | `1164`                         |
 | Hoymiles HMS-1800-4T | CMT2300A           | 4         | 4           | 1         | `1164`                         |
 | Hoymiles HMS-2000-4T | CMT2300A           | 4         | 4           | 1         | `1164`                         |
+| Hoymiles HMS-2000D-4T| CMT2300A           | 4         | 2           | 1         | `1166`                         |
 | Hoymiles HMT-1600-4T | CMT2300A           | 4         | 2           | 3         | `1361`                         |
 | Hoymiles HMT-1800-4T | CMT2300A           | 4         | 2           | 3         | `1361`                         |
 | Hoymiles HMT-2000-4T | CMT2300A           | 4         | 2           | 3         | `1361`                         |
