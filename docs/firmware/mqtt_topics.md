@@ -9,6 +9,7 @@ The base topic, as configured in the web GUI is prepended to all following topic
 | `dtu/ip`                                  | R     | IP address of OpenDTU                                | IP address                 |
 | `dtu/hostname`                            | R     | Current hostname of the dtu (as set in web GUI)      |                            |
 | `dtu/rssi`                                | R     | WiFi network quality                                 | db value                   |
+| `dtu/bssid`                               | R     |                                                      | MAC address                |
 | `dtu/status`                              | R     | Indicates whether OpenDTU network is reachable       | online /  offline          |
 | `dtu/temperature`                         | R     | Temperature of the ESP32                             | °C                         |
 | `dtu/uptime`                              | R     | Time in seconds since startup                        | seconds                    |
@@ -16,6 +17,10 @@ The base topic, as configured in the web GUI is prepended to all following topic
 | `dtu/heap/size`                           | R     | Total heap size                                      | Bytes                      |
 | `dtu/heap/minfree`                        | R     | Lowest level of free heap since boot                 | Bytes                      |
 | `dtu/heap/maxalloc`                       | R     | Largest block of heap that can be allocated at once  | Bytes                      |
+| `dtu/psram/free`                          | R     | Available PSRAM                                      | Bytes                      |
+| `dtu/psram/size`                          | R     | Total PSRAM size                                     | Bytes                      |
+| `dtu/psram/minfree`                       | R     | Lowest level of free PSRAM since boot                | Bytes                      |
+| `dtu/psram/maxalloc`                      | R     | Largest block of PSRAM that can be allocated at once | Bytes                      |
 
 ## Inverter total topics
 
@@ -43,6 +48,8 @@ serial will be replaced with the serial number of the inverter.
 | `[serial]/device/fwbuilddatetime`         | R     | Build date / time of inverter firmware               |                            |
 | `[serial]/device/hwpartnumber`            | R     | Hardware part number of the inverter                 |                            |
 | `[serial]/device/hwversion`               | R     | Hardware version of the inverter                     |                            |
+| `[serial]/device/rf_hwversion`            | R     | RF Module Hardware Version                           |                            |
+| `[serial]/device/rf_fwversion`            | R     | RF Module Firmware Version                           |                            |
 | `[serial]/radio/tx_request`               | R     | Amount of sent packet requests                       |                            |
 | `[serial]/radio/tx_re_request`            | R     | Amount of sent fragment resend requests              |                            |
 | `[serial]/radio/rx_success`               | R     | Amount of successfully received packets              |                            |
