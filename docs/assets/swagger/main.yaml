@@ -48,6 +48,8 @@ tags:
     description: Firmware upload
   - name: i18n
     description: Localization settings
+  - name: Logging
+    description: Log level settings
 
 paths:
   /api/system/status:
@@ -202,6 +204,12 @@ paths:
       parameters:
         - $ref: "#/components/parameters/XRequestWith"
       responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+
         "401":
           $ref: "#/components/responses/UnauthorizedError"
 
@@ -410,6 +418,28 @@ paths:
                   sun_isDayPeriod:
                     type: boolean
                     description: Returns `true` if the current time is between sun set time and sun rise time
+
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /api/ntp/zones:
+    get:
+      tags:
+        - NTP
+      summary: Retrieve time zone information
+      security:
+        - ReadOnlyAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
 
         "401":
           $ref: "#/components/responses/UnauthorizedError"
@@ -838,6 +868,15 @@ paths:
                   pdl_supported:
                     type: boolean
                     example: false
+                  rf_valid_data:
+                    type: boolean
+                    example: true
+                  rf_hw_version:
+                    type: string
+                    example: 00.00.00.00
+                  rf_fw_version:
+                    type: string
+                    example: 00.00.00.00
         "401":
           $ref: "#/components/responses/UnauthorizedError"
 
@@ -1128,6 +1167,64 @@ paths:
         "500":
           $ref: "#/components/responses/InternalServerError"
 
+  /api/logging/config:
+    get:
+      tags:
+        - Logging
+      summary: Retrieve current log level configuration
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LoggingConfig"
+
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+    post:
+      tags:
+        - Logging
+      summary: Save log level configuration
+      security:
+        - ReadWriteAccess: []
+      parameters:
+        - $ref: "#/components/parameters/XRequestWith"
+      requestBody:
+        description: The JSON code has to be embedded into the url encoded body!
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                data:
+                  $ref: "#/components/schemas/LoggingConfig"
+            encoding:
+              data:
+                contentType: application/json
+
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LoggingConfig"
+
+      responses:
+        "200":
+          $ref: "#/components/responses/PostResponse"
+
+        "401":
+          $ref: "#/components/responses/UnauthorizedError"
+
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
 components:
   securitySchemes:
     ReadOnlyAccess:
@@ -1245,3 +1342,6 @@ components:
         - longitude
         - latitude
         - sunsettype
+    LoggingConfig:
+      title: Log level configuration
+      type: object
