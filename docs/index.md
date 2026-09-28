@@ -35,12 +35,12 @@ Open Source software to talk to [Hoymiles][1]{target=_blank} solar inverters. It
 ## Features for developers
 
 * The microcontroller part
-    * Build with Arduino PlatformIO Framework for the ESP32
-    * Uses a fork of [ESPAsyncWebserver](https://github.com/mathieucarbou/ESPAsyncWebServer) and [espMqttClient](https://github.com/bertmelis/espMqttClient)
+  * Build with Arduino PlatformIO Framework for the ESP32
+    * Uses a fork of [ESPAsyncWebserver](https://github.com/ESP32Async/ESPAsyncWebServer) and [espMqttClient](https://github.com/bertmelis/espMqttClient)
 
 * The WebApp part
-    * Build with [Vue.js](https://vuejs.org) and [Bootstrap](https://getbootstrap.com)
-    * Source is written in TypeScript
+  * Build with [Vue.js](https://vuejs.org) and [Bootstrap](https://getbootstrap.com)
+  * Source is written in TypeScript
 
 ## Background
 
