@@ -21,7 +21,7 @@ Optional password for the access point, if required.
 
 #### Wi-Fi Hostname :material-form-textbox:{title="Textbox"}
 
-The host name with which OpenDTU logs on to various services (DNS server, MQTT server, mDNS). This name must be unique in the LAN[^2]. The text `%06X` will be replaced internally by the ChipID of the ESP. This helps to keep the hostname unique. The hostname will be also used if the ESP is connected via ethernet.
+The host name with which OpenDTU logs on to various services (DNS server, MQTT server, mDNS). This name must be unique in the LAN[^2]. The text `$id$` will be replaced internally by the ChipID of the ESP. This helps to keep the hostname unique. The hostname will be also used if the ESP is connected via ethernet.
 
 #### Enable DHCP :material-toggle-switch:{title="Switch"}
 
